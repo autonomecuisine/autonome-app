@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   height="1939.2465"
+   width="431.54852"
+   sodipodi:docname="wooden_spoon.svg"
+   version="1.1"
+   viewBox="0 0 431.54852 1939.2465"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata25949">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs25947" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="1"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="970"
+     inkscape:cx="-699.74422"
+     inkscape:zoom="0.136"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     lock-margins="false"
+     showgrid="false"
+     id="namedview25945"
+     inkscape:window-height="1027"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:#231f20"
+     d="M 215.92695,0 C 96.926955,0 -1.8730452,156 0.02695477,289 1.9269548,422 157.69695,691.85 157.69695,691.85 V 1881.7 a 58.31,58.31 0 0 0 116.61,0 V 691.76 c 61.16,-128.85 156.87,-263 157.24,-402.8 C 431.99695,129.67 334.98695,0 215.92695,0 Z"
+     id="path839" />
+</svg>

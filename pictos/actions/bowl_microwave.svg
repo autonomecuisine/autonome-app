@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1926" height="1919.9" data-name="Layer 1" version="1.1" viewBox="0 0 1926.05 1919.9399" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<path d="m1397 555.83c237.79 0 517-126.51 517-413.91 0-67.7-231.45-129.92-517-129.92h-0.79c-285.52 0-517 62.22-517 129.92 0 287.4 279.18 413.91 517 413.91z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="24px"/>
+<path d="m1880.6 137.98c0 32.44-216.47 80.51-483.49 80.51h-0.85c-267 0-483.49-48.07-483.49-80.51" fill="none" stroke="#231f20" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24px"/>
+<g transform="translate(-38,-37.58)">
+<path d="m505.34 708v-132.47c0-129.1 104.66-233.75 233.76-233.75h132.9m-236.11 235.71-130.55 153.87-130.54-153.87" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="24px"/>
+</g>
+<g transform="translate(-38,-37.58)" stroke="#231f20" stroke-linejoin="round" stroke-width="24px">
+<path d="m50 796.14h1900v1149.4h-1900z" fill="#fff" opacity=".992" stroke-linecap="round" style="isolation:isolate"/>
+<path d="m184.88 1011.2h1063.4v713.48h-1063.4z" fill="#a7a9ac" opacity=".992" stroke-linecap="round" style="isolation:isolate"/>
+<path d="m1561 1011.2h256.07a33.16 33.16 0 0 1 33.23 33.23v379.22a33.16 33.16 0 0 1 -33.23 33.23h-256.07a33.16 33.16 0 0 1 -33.23 -33.23v-379.22a33.16 33.16 0 0 1 33.23 -33.23z" fill="#fff" opacity=".989" stroke-linecap="round" style="isolation:isolate"/>
+<path d="m1547.3 1570.2h281.48a23.41 23.41 0 0 1 23.45 23.46v107.51a23.4 23.4 0 0 1 -23.45 23.46h-281.48a23.4 23.4 0 0 1 -23.46 -23.46v-107.51a23.41 23.41 0 0 1 23.46 -23.46z" fill="#fff" opacity=".989" stroke-linecap="round" style="isolation:isolate"/>
+<path d="m1398.8 796.14z" fill="#fff" opacity=".992" stroke-linecap="round" style="isolation:isolate"/>
+<line x1="1531.4" x2="1846.7" y1="1122.6" y2="1122.6" fill="none" stroke-linecap="square"/>
+<line x1="1531.4" x2="1846.7" y1="1234" y2="1234" fill="none" stroke-linecap="square"/>
+<line x1="1531.4" x2="1846.7" y1="1345.4" y2="1345.4" fill="none" stroke-linecap="square"/>
+<line x1="1635.3" x2="1635.3" y1="1015" y2="1452.9" fill="none" stroke-linecap="square"/>
+<line x1="1742.8" x2="1742.8" y1="1015" y2="1452.9" fill="none" stroke-linecap="square"/>
+</g>
+</svg>

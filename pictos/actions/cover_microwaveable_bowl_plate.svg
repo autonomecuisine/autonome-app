@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   sodipodi:docname="cover_microwaveable_bowl_plate.svg"
+   id="svg2589"
+   version="1.1"
+   width="1817.92"
+   height="1956.32">
+  <metadata
+     id="metadata2595">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2593" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg2589"
+     inkscape:window-maximized="0"
+     inkscape:window-y="1105"
+     inkscape:window-x="0"
+     inkscape:cy="978.15997"
+     inkscape:cx="13.512105"
+     inkscape:zoom="0.13903656"
+     showgrid="false"
+     id="namedview2591"
+     inkscape:window-height="480"
+     inkscape:window-width="1674"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     id="g2579"
+     stroke="#231f20">
+    <ellipse
+       id="ellipse2573"
+       stroke-width="24"
+       fill="#fff"
+       cx="908.96"
+       cy="328.84"
+       rx="896.96"
+       ry="316.84" />
+    <ellipse
+       id="ellipse2575"
+       stroke-width="16"
+       fill="#f1f2f2"
+       cx="908.96"
+       cy="322.62"
+       rx="590.24"
+       ry="179.23" />
+    <path
+       id="path2577"
+       stroke-miterlimit="10"
+       stroke-width="24"
+       fill="#fff"
+       d="M909.58 1944.32c371.56 0 807.8-197.7 807.8-646.77 0-105.78-361.67-203-807.8-203h-1.24c-446.14 0-807.8 97.23-807.8 203 0 449.08 436.25 646.77 807.8 646.77" />
+  </g>
+  <g
+     id="g2587"
+     stroke-linecap="round"
+     fill="none"
+     stroke-width="24"
+     stroke="#231f20">
+    <path
+       id="path2583"
+       stroke-miterlimit="10"
+       d="M1665.12 1291.43c0 50.68-338.25 125.8-755.5 125.8h-1.33c-417.25 0-755.5-75.1-755.5-125.8" />
+    <path
+       id="path2585"
+       stroke-linejoin="round"
+       d="M908.96 1010.13V734.67m98.18 177.28l-98.18 115.7-98.18-115.7" />
+  </g>
+</svg>

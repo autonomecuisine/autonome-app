@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000">
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <g>
+        <path d="M475.1,690.8v-212.38c0-25.13,19.52-45.5,43.6-45.5h970.03c24.08,0,43.6,20.37,43.6,45.5v212.38" style="fill: #fff; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <circle cx="613.39" cy="541.81" r="40.31" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <circle cx="747.21" cy="541.81" r="40.31" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <circle cx="995.98" cy="541.81" r="40.31" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <rect x="413.48" y="690.8" width="1165.01" height="1266.09" rx="49.67" ry="49.67" style="fill: #fff; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <line x1="417.81" y1="1719.74" x2="1574.16" y2="1719.74" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <rect x="486.23" y="866.42" width="1019.5" height="70.71" rx="15.17" ry="15.17" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <line x1="417.81" y1="785.53" x2="1574.16" y2="785.53" style="fill: none; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+        <g>
+          <line x1="574.99" y1="665.53" x2="912.08" y2="665.53" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 33.11px;"/>
+          <line x1="1079.88" y1="665.53" x2="1416.98" y2="665.53" style="fill: none; stroke: #1d75bc; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 33.11px;"/>
+        </g>
+        <g>
+          <rect x="573.08" y="1018.03" width="845.8" height="620.82" rx="99.34" ry="99.34" style="fill: #a6a8ab; stroke: #010101; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+          <line x1="575.56" y1="1450.4" x2="1420.61" y2="1450.4" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+          <g>
+            <line x1="656.17" y1="1450.4" x2="656.17" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="770.14" y1="1450.4" x2="770.14" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="884.11" y1="1450.4" x2="884.11" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="998.09" y1="1450.4" x2="998.09" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="1112.06" y1="1450.4" x2="1112.06" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="1226.03" y1="1450.4" x2="1226.03" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+            <line x1="1340" y1="1450.4" x2="1340" y2="1629.45" style="fill: none; stroke: #010101; stroke-linecap: round; stroke-miterlimit: 15.12; stroke-width: 24px;"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <path d="M1038.03,151.44c-2.57,3.93-.74,1.08-1.32,1.95l-.05-.02-.1-.03-.2-.07-.39-.14-.78-.28-1.56-.55-3.12-1.08-6.2-2.14c-4.15-1.37-8.22-2.82-12.37-4.11-8.21-2.7-16.48-5.12-24.68-7.57-4.1-1.21-8.22-2.36-12.35-3.45-4.1-1.16-8.2-2.29-12.32-3.35-8.25-2.09-16.54-4.22-24.42-6.06l-25.36-5.96c-8.49-1.86-17.07-3.46-25.47-5.57-8.4-2.11-16.56-4.91-24.36-8.79-3.92-1.86-7.74-4.07-11.53-6.33-1.97-.92-3.6-2.85-4.6-6.64-.27-.91-.47-1.99-.66-3.12l-.4-3.92v-.12c-.3-7.07,2.02-14.01,6.52-19.48l.06-.07,2.68-2.89c.84-.79,1.66-1.53,2.42-2.09,3.1-2.42,5.58-2.98,7.72-2.53,4.43,.47,8.83,1.02,13.13,1.9,8.64,1.61,16.91,4.3,24.95,7.67,8.04,3.37,15.89,7.27,23.84,10.89l23.95,10.5c8.43,4.01,16.23,8.33,23.98,12.89,3.88,2.27,7.73,4.58,11.53,6.96,3.79,2.43,7.54,4.9,11.25,7.43,7.45,5.01,14.63,10.44,21.61,16.08,3.47,2.86,6.91,5.72,10.21,8.77,1.67,1.5,3.3,3.04,4.92,4.59l2.38,2.38,1.18,1.19,.59,.6,.29,.3,.15,.15,.07,.07,.04,.04c-.56,.89,1.3-1.94-1.24,2.01Z" style="fill: #231f20;"/>
+        <path d="M1240.8,98.83h.47c152.55,0,276.22,24.25,276.22,60.42-6.83,28.02-26.39,67.36-50,85.38-18.93,12.96-128.8,31.08-226.21,31.08h-1.38c-97.41,0-207.29-18.12-226.21-31.08-23.61-18.02-43.16-57.36-50-85.38,0-36.17,123.67-60.42,276.22-60.42h.43" style="fill: #fff; stroke: #231f20; stroke-miterlimit: 10; stroke-width: 24px;"/>
+        <path d="M1498.7,157.15c0,17.33-115.66,43.02-258.33,43.02h-.45c-142.67,0-258.33-25.68-258.33-43.02" style="fill: none; stroke: #231f20; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 14px;"/>
+        <circle cx="1046.25" cy="142.64" r="5.47" style="fill: #231f20;"/>
+        <circle cx="1011.72" cy="155.77" r="5.47" style="fill: #231f20;"/>
+      </g>
+      <g id="layer5" transform="translate(146.21388,2.9898502)">
+        <g id="g986" transform="translate(117.5,0.0857077)">
+          <path id="rect981" d="M1252.6,598.76V321.89m89.61,187.26l-89.61,105.61-89.61-105.61" style="fill: none; stroke: #231f20; stroke-linecap: round; stroke-linejoin: round; stroke-width: 24px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Isolation_Mode" data-name="Isolation Mode"/>
+  <g id="Layer_2" data-name="Layer 2"/>
+</svg>

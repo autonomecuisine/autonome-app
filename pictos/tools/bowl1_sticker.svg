@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="94.199997"
+   inkscape:export-xdpi="94.199997"
+   inkscape:export-filename="/Volumes/GoogleDrive/Shared drives/Autonome Team Drive/03 - Application &amp; Web Site/Application/Assets/Pictograms/Tools/png/bowl1_sticker.png"
+   id="Layer_1"
+   data-name="Layer 1"
+   width="254"
+   height="135.39912"
+   viewBox="0 0 253.99999 135.39913"
+   version="1.1"
+   sodipodi:docname="bowl1_sticker.svg"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)">
+  <metadata
+     id="metadata884">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     inkscape:document-rotation="0"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="907"
+     id="namedview882"
+     showgrid="false"
+     inkscape:zoom="2.8"
+     inkscape:cx="104.17323"
+     inkscape:cy="60.069248"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-bottom="2"
+     fit-margin-right="2" />
+  <defs
+     id="defs835">
+    <style
+       id="style833">.cls-1,.cls-3,.cls-5{fill:#231f20;}.cls-1,.cls-2,.cls-3,.cls-6,.cls-8,.cls-9{stroke:#231f20;}.cls-1,.cls-2,.cls-3,.cls-6,.cls-8{stroke-miterlimit:10;}.cls-1,.cls-2{stroke-width:4px;}.cls-2,.cls-4{fill:#fff;}.cls-3{stroke-width:3px;}.cls-5{font-size:37.35px;font-family:ArialRoundedMTBold, Arial Rounded MT Bold;}.cls-6,.cls-8,.cls-9{fill:none;stroke-width:2px;}.cls-6{stroke-linecap:round;}.cls-7{fill:#915524;}.cls-9{stroke-linejoin:round;}</style>
+  </defs>
+  <path
+     class="cls-2"
+     d="M 127.0949,133.39913 C 184.55152,133.39913 252,102.82701 252,33.399132 252,17.035249 196.07538,2 127.0949,2 h -0.1898 C 57.92462,2 2,17.035249 2,33.399132 2,102.82701 69.462039,133.39913 126.9051,133.39913"
+     id="path845"
+     inkscape:connector-curvature="0"
+     style="opacity:1" />
+  <path
+     class="cls-6"
+     d="m 243.86551,32.463666 c 0,7.849783 -52.30477,19.454989 -116.81128,19.454989 h -0.20336 c -64.520067,0 -116.82484,-11.605206 -116.82484,-19.454989"
+     id="path849"
+     inkscape:connector-curvature="0" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Number">
+    <g
+       transform="translate(-4.2051109,1.8314504)"
+       class="cls-5"
+       style="font-size:133.333px;font-family:ArialRoundedMTBold, 'Arial Rounded MT Bold';fill:#231f20;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="text847"
+       aria-label="1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path906"
+         style="stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 127.10967,102.52113 V 43.276488 q -16.53641,12.69528 -22.26557,12.69528 -2.73436,0 -4.882795,-2.148432 -2.083328,-2.213536 -2.083328,-5.078112 0,-3.320304 2.083328,-4.8828 2.083325,-1.562496 7.356755,-4.036448 7.87758,-3.710928 12.56507,-7.81248 4.75259,-4.101552 8.39842,-9.179664 3.64582,-5.078112 4.75259,-6.249984 1.10677,-1.171872 4.16665,-1.171872 3.45052,0 5.53384,2.669264 2.08333,2.669264 2.08333,7.356752 v 74.54408 q 0,13.085908 -8.91925,13.085908 -3.97134,0 -6.38019,-2.66927 -2.40885,-2.66926 -2.40885,-7.87758 z" />
+    </g>
+  </g>
+</svg>

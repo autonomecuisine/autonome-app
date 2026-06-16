@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000">
+  <g>
+    <path id="path900" d="m1672.89,662.38l-446.9-186.44c112.62-117.16,159.25-235.78,162.99-390.7l446.9,186.44h0c22.23,9.27,20.47,110.81-24.59,218.82-45.06,108.01-116.23,181.12-138.41,171.87h0Z" style="fill: #9b9ea9; stroke-width: 0px;"/>
+    <path id="path900-2" data-name="path900" d="m1672.89,662.38l-446.9-186.44c112.62-117.16,159.25-235.78,162.99-390.7l446.9,186.44h0c22.23,9.27,20.47,110.81-24.59,218.82-45.06,108.01-116.23,181.12-138.41,171.87h0Z" style="fill: #929497; stroke-width: 0px;"/>
+    <path id="path900-3" data-name="path900" d="m1597.34,630.86l-294.91-123.03-.45-.19c22.17,9.25,83.32-68.04,128.39-176.05,45.06-108.01,56.84-205.37,34.61-214.64l294.91,123.03.45.19c22.23,9.27,20.47,110.81-24.59,218.82-45.06,108.01-116.23,181.12-138.41,171.87h0Z" style="fill: #fff; stroke-width: 0px;"/>
+    <path id="path900-4" data-name="path900" d="m1672.89,662.38l-446.9-186.44c112.62-117.16,159.25-235.78,162.99-390.7l446.9,186.44h0c22.23,9.27,20.47,110.81-24.59,218.82-45.06,108.01-116.23,181.12-138.41,171.87h0Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 17.44px;"/>
+    <path id="path900-5" data-name="path900" d="m1388.98,85.24c22.23,9.27,10.45,106.63-34.61,214.64-45.06,108.01-106.21,185.3-128.39,176.05-22.17-9.25-14.38-108.23,30.68-216.24,45.06-108.01,110.08-183.73,132.31-174.45Z" style="fill: #929497; stroke-width: 0px;"/>
+    <path id="path900-6" data-name="path900" d="m1225.99,475.94c-22.17-9.25-14.38-108.23,30.68-216.24,45.06-108.01,110.08-183.73,132.31-174.45" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 17.44px;"/>
+    <path d="m1273.05,330.22c-.19.03-.31.05-.31.05-342.58,299.84-292.26,635.03-292.26,635.03l182.03-5.65s-33.83-358.85,57.2-490.07c.97,4.63,20.76-2.11,22.16,2.99,28.28-16.92,75.74-84.57,112.5-172.68,6.16-14.76,11.69-29.32,16.61-43.49,5.36-15.46-57.33,39.95-97.93,73.83Z" style="fill: #c93c27; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 17.44px;"/>
+    <path id="path900-7" data-name="path900" d="m1362.14,60.72c-9.39-8.73-81.7,48.19-158.51,130.75-76.8,82.56-128.67,159.15-119.3,167.87,9.36,8.71,83.33-46.63,160.14-129.19,76.8-82.56,127.06-160.69,117.67-169.43Z" style="fill: #6d6e70; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 17.44px;"/>
+    <path id="path900-8" data-name="path900" d="m1388.98,85.24c22.23,9.27,10.45,106.63-34.61,214.64-45.06,108.01-106.21,185.3-128.39,176.05" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 17.44px;"/>
+    <g>
+      <g id="layer1">
+        <path id="path60" d="m1633.11,325.98c-12.47-14.14-24.38-18.33-29.35-20.36-58.93-24.13-103.02-5.67-119.49,48.9-4.94,16.8.39,22.27,1.67,30.99-5.51,3.44-19.64,17.07-25.34,26.82-27.51,53.63-8.65,97.55,49.72,121.46,52.22,21.39,112.17-3.95,141.46-75.45,6.86-16.76,12.05-31.41,12.11-47.87.12-33.18-8.33-59.05-30.76-84.48Z" style="fill: #c93c27; stroke: #000; stroke-width: 8.72px;"/>
+        <path id="path924" d="m1475.92,451.26c-4.57,1.55,5.48,25.34,23.23,46.44,8.28,11.38,37.41-6.76,18.06-16.2-21.82-10.84-32.65-33.29-41.29-30.23h0Z" style="fill: #fff; stroke-width: 0px;"/>
+        <path id="path920" d="m1479.74,384.31s-21.92,8.91-32.12,7.78c3.13,1.66,15.13,5.82,26.01,3.42,0,0-9.64,27.26-7.2,32.45,0,0,14.19-23.5,13.47-31.03,0,0,20.64,11.88,29.54,10.58,0,0-13.97-19.8-19.72-20.64,0,0,20.03-25.67,20.95-34.43-4.85.68-22.19,17.94-24.94,25.57-.26-9.92-8.93-20.02-8.93-20.02,0,0,2.63,22.39,2.92,26.32Z" style="fill: #07a44a; stroke-width: 0px;"/>
+      </g>
+      <g id="layer2">
+        <g id="g990">
+          <path id="path984" d="m1616.94,325.2l13.98-34.14,34.14,13.98-13.98,34.14-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path986" d="m1630.93,291.06l-2.94-22.61,34.14,13.98,2.94,22.61-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path988" d="m1614,302.59l13.98-34.14,2.94,22.61-13.98,34.14-2.94-22.61Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+        </g>
+        <g id="g982">
+          <path id="rect957" d="m1653.15,318.63l13.98-34.14,34.14,13.98-13.98,34.14-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path975" d="m1667.14,284.49l-2.94-22.61,34.14,13.98,2.94,22.61-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path977" d="m1650.21,296.02l13.98-34.14,2.94,22.61-13.98,34.14-2.94-22.61Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+        </g>
+        <g id="g998">
+          <path id="path992" d="m1642.09,390.93l13.98-34.14,34.14,13.98-13.98,34.14-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path994" d="m1656.08,356.79l-2.94-22.61,34.14,13.98,2.94,22.61-34.14-13.98Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+          <path id="path996" d="m1639.15,368.32l13.98-34.14,2.94,22.61-13.98,34.14-2.94-22.61Z" style="fill: #c93c27; stroke: #040306; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8.72px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="layer3">
+    <path id="path916" d="m1631.23,969.63l246.33,27.37c96.28,10.7,96.94,158.32,10.53,189.49l-256.86,92.64v-309.5Zm-1262.47,0l-246.33,27.37c-96.28,10.7-96.94,158.32-10.53,189.49l256.86,92.64v-309.5Zm1262.47-189.75v987.34c0,100.62-81.01,181.63-181.63,181.63h-899.21c-100.62,0-181.63-81.01-181.63-181.63v-987.34h1262.46Z" style="fill: #fff; stroke: #231f20; stroke-linecap: round; stroke-linejoin: round; stroke-width: 24px;"/>
+  </g>
+</svg>

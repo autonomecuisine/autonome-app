@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   height="2213.4731"
+   width="1648.4292"
+   sodipodi:docname="cutting_board_kitchen_knife.svg"
+   version="1.1"
+   viewBox="0 0 1648.4291 2213.4731"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata1502">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1500" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="40"
+     inkscape:window-x="106"
+     inkscape:cy="1057.6343"
+     inkscape:cx="-91.221535"
+     inkscape:zoom="0.14954688"
+     fit-margin-bottom="5"
+     fit-margin-right="5"
+     fit-margin-left="5"
+     lock-margins="true"
+     fit-margin-top="5"
+     showgrid="false"
+     id="namedview1498"
+     inkscape:window-height="751"
+     inkscape:window-width="1683"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     transform="rotate(-7.1073779,1240.8897,269.17054)"
+     id="g2104">
+    <rect
+       x="28.139999"
+       y="29.469999"
+       width="1402.77"
+       height="1946.48"
+       rx="82.25"
+       style="fill:#ffffff;stroke:#231f20;stroke-width:24.6753px;stroke-miterlimit:10"
+       id="rect1493" />
+    <rect
+       x="372.59"
+       y="147.42"
+       width="713.88"
+       height="103.51"
+       rx="51.759998"
+       style="fill:#ffffff;stroke:#231f20;stroke-width:24.6753px;stroke-miterlimit:10"
+       id="rect1495" />
+  </g>
+  <g
+     transform="matrix(0.99130673,0,0,0.99130673,95.151497,76.332087)"
+     id="g2100">
+    <path
+       d="m 1241.4246,1042.1212 c 0,0 -239.9538,329.8585 -492.0465,597.6131 C 455.5464,1951.7928 134.21572,2199.5238 65.984949,2126.8647 20.633797,2078.5662 977.83572,786.36068 977.83572,786.36068 Z"
+       style="fill:#d1d3d4;stroke:#231f20;stroke-width:22.4332px;stroke-miterlimit:10"
+       id="path11869"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 1548.3676,388.73341 -398.4441,398.69386 a 50.882204,58.964388 0 0 0 -14.2227,65.84692 v 0 a 50.882204,58.964388 0 0 1 -11.7654,63.23074 l -5.505,6.27881 -143.0346,-138.75749 34.2283,-47.38282 13.5715,-18.77604 345.5822,-478.26558 c 10.8276,-14.98259 31.3194,-15.75738 45.7766,-1.7307 l 128.6121,96.64727 c 15.0563,14.65053 17.4962,39.52425 5.2011,54.21503 z"
+       style="fill:#231f20;stroke-width:0.934716"
+       id="path11871"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

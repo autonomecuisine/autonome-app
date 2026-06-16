@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   height="266.93451"
+   width="1900.01"
+   sodipodi:docname="measuring_spoon.svg"
+   version="1.1"
+   viewBox="0 0 1900.01 266.93451"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata14166">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14164" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="133.44451"
+     inkscape:cx="437.09794"
+     inkscape:zoom="0.2425"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     id="namedview14162"
+     inkscape:window-height="480"
+     inkscape:window-width="870"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     transform="translate(-49.5,-48.555488)"
+     id="layer2">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#383850;stroke:#383850;stroke-width:5.95047px;stroke-miterlimit:11.3386"
+       d="M 49.51,70.14 C 57.7,152.05 136.75,236 136.75,236 c 44.14,44.87 97,50.63 181.16,51.88 70.15,1 113,-3.74 141.71,-19.13 28.48,-15.26 66.38,-61.5 89.41,-88 20.5,-23.59 28.1,-48.12 49.35,-48.12 0,0 85.41,-2.76 201.42,-3.73 330.79,-2.78 449.7,-21.7 490.49,-20.43 128.48,4 166.33,10.57 243.94,28.82 214.56,50.49 232.9,111.53 318.38,178.2 l 96.9,-4.25 C 1784.31,172.62 1755.07,124 1537.23,73.68 1460.74,56 1389.23,50.11 1293.04,48.58 1245.91,47.82 1172.93,65 795.55,63 578.12,61.78 541.19,64.89 414,65.11 c -125,2.33 -239.57,0.57 -364.5,5 z"
+       id="path1047" />
+  </g>
+</svg>

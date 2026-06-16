@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="94.199997"
+   inkscape:export-xdpi="94.199997"
+   inkscape:export-filename="/Users/marc-andrelanglais/Google Drive File Stream/Shared drives/Cuistogo Team Drive/03 - Application &amp; Web Site/Application/Assets/Pictograms/Ingredients/In Production/png/aniseed.png"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 250.00389 216.50904"
+   version="1.1"
+   sodipodi:docname="aniseed.svg"
+   width="250.00386"
+   height="216.50903"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)">
+  <metadata
+     id="metadata15951">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>couleur</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="963"
+     id="namedview15949"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="400"
+     inkscape:cy="357.96949"
+     inkscape:window-x="51"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer3"
+     inkscape:document-rotation="0" />
+  <defs
+     id="defs15940">
+    <style
+       id="style15938">.cls-1{fill:#bfe6f4;}.cls-2{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:9.77px;}</style>
+  </defs>
+  <title
+     id="title15942">couleur</title>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Outer"
+     transform="translate(228.39452,321.38042)"
+     sodipodi:insensitive="true">
+    <path
+       inkscape:export-ydpi="94.199997"
+       inkscape:export-xdpi="94.199997"
+       inkscape:connector-curvature="0"
+       id="polygon15946"
+       d="M 21.609347,-104.87405 -103.39065,-321.38042 -228.39452,-104.87138 Z"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:13.0713;stroke-miterlimit:10;stroke-dasharray:none" />
+  </g>
+  <g
+     sodipodi:insensitive="true"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Mid"
+     transform="translate(228.39452,321.38042)">
+    <polygon
+       inkscape:export-ydpi="94.199997"
+       inkscape:export-xdpi="94.199997"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:3.86805;stroke-miterlimit:10;stroke-dasharray:none"
+       transform="matrix(-1.4666126,-2.5402475,2.5402475,-1.4666126,-178.27675,47.310827)"
+       id="polygon15944"
+       points="90.5,81.73 53.51,17.66 16.52,81.73 " />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Pattern"
+     transform="translate(228.39452,321.38042)">
+    <path
+       id="polygon7536"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -103.39063,-302.44785 -16.43555,28.4668 h 32.87109 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon7538"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -74.22657,-251.93418 v 36.28516 h 20.94922 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon7540"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -132.55861,-251.92832 -20.94726,36.2793 h 20.94726 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon7542"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -132.55861,-215.64902 v 58.33398 h 58.33204 v -58.33398 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon7544"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -187.18556,-157.31504 -3.70703,6.42188 v 36.375 h 58.33398 v -42.79688 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="polygon7546"
+       style="opacity:1;fill:#2c9e48;fill-opacity:1;stroke-width:11.3459;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+       d="m -74.22657,-157.31504 v 42.79493 h 58.33398 v -36.37696 l -3.70507,-6.41797 z"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

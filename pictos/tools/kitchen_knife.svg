@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   height="1911.9722"
+   width="1730.0762"
+   sodipodi:docname="kitchen_knife.svg"
+   version="1.1"
+   viewBox="0 0 1730.0762 1911.9722"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata11878">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11876" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="977.75141"
+     inkscape:cx="679.75156"
+     inkscape:zoom="0.136"
+     fit-margin-right="0"
+     fit-margin-top="0"
+     fit-margin-bottom="12"
+     fit-margin-left="12"
+     showgrid="false"
+     id="namedview11874"
+     inkscape:window-height="480"
+     inkscape:window-width="870"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11869"
+     style="fill:#d1d3d4;stroke:#231f20;stroke-width:24px;stroke-miterlimit:10"
+     d="m 1367.529,809.25141 c 0,0 -276.35,327.81999 -566.67998,593.91999 -338.4,310.13 -708.470005,556.33 -787.050005,484.12 -52.23,-48 1050.159985,-1332.21999 1050.159985,-1332.21999 z" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path11871"
+     style="fill:#231f20"
+     d="m 1721.029,159.90141 -458.88,396.23 a 58.6,58.6 0 0 0 -16.38,65.44 v 0 a 58.6,58.6 0 0 1 -13.55,62.84 l -6.34,6.24 -164.73,-137.9 39.42,-47.09 15.63,-18.66 398,-475.310004 c 12.47,-14.8900003 36.07,-15.6600003 52.72,-1.7200003 l 148.12,96.0500043 c 17.34,14.56 20.15,39.28 5.99,53.88 z" />
+</svg>

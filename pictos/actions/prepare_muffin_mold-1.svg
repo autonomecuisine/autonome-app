@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 835">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        opacity: .99;
+      }
+    </style>
+  </defs>
+  <g id="g2386">
+    <g id="g1480">
+      <path id="path1482" class="cls-1" d="m99.82,356.72h349.39l-34.16,141.56H133.98l-34.16-141.56Z"/>
+    </g>
+    <g id="g1480-2" data-name="g1480">
+      <path id="path1482-2" data-name="path1482" class="cls-1" d="m580.92,356.72h349.39l-34.16,141.56h-281.07l-34.16-141.56Z"/>
+    </g>
+    <g id="g1480-3" data-name="g1480">
+      <path id="path1482-3" data-name="path1482" class="cls-1" d="m1062.02,356.72h349.39l-34.16,141.56h-281.07l-34.16-141.56Z"/>
+    </g>
+    <g id="g1480-4" data-name="g1480">
+      <path id="path1482-4" data-name="path1482" class="cls-1" d="m1543.12,356.72h349.39l-34.16,141.56h-281.07l-34.16-141.56Z"/>
+    </g>
+    <g id="g1456" class="cls-3">
+      <path id="path1458" class="cls-2" d="m1936.81,356.72H63.19c-7.28,0-13.19,5.9-13.19,13.19h0c0,7.28,5.9,13.19,13.19,13.19h1873.63c7.28,0,13.19-5.9,13.19-13.19h0c0-7.28-5.9-13.19-13.19-13.19Z"/>
+    </g>
+  </g>
+</svg>

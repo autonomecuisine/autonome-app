@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   sodipodi:docname="clove_powder.svg"
+   version="1.1"
+   viewBox="0 0 1969.66 1876"
+   height="1876"
+   width="1969.66"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata854">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs852" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:cy="498"
+     inkscape:cx="384.83"
+     inkscape:zoom="0.35"
+     fit-margin-bottom="28"
+     fit-margin-right="28"
+     fit-margin-left="28"
+     lock-margins="true"
+     fit-margin-top="28"
+     showgrid="false"
+     id="namedview850"
+     inkscape:window-height="907"
+     inkscape:window-width="1600"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon833"
+     style="fill:#ffffff;stroke:#231f20;stroke-width:54.9997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     points="1956.83,785.18 1478.41,1251.52 1591.35,1910 1000,1599.11 408.65,1910 521.59,1251.52 43.17,785.18 704.32,689.11 1000,90 1295.68,689.11 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon835"
+     style="fill:#f89e1f"
+     points="936.34,424.6 1128.4,555.77 1000,295.61 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon837"
+     style="fill:#f89e1f"
+     points="1502.18,811.07 1677.23,930.64 1761.27,848.72 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon839"
+     style="fill:#f89e1f"
+     points="1235.25,772.28 1191.05,682.73 905.28,487.54 814.89,670.7 1478.74,1124.12 1626.46,980.12 1345.66,788.33 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon841"
+     style="fill:#f89e1f"
+     points="783.82,733.64 764.75,772.28 531.49,806.18 1412.96,1408.24 1380.63,1219.74 1427.97,1173.6 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon843"
+     style="fill:#f89e1f"
+     points="429.88,820.95 238.73,848.72 535.43,1137.93 1261.08,1633.56 1470.49,1743.65 1429.31,1503.57 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon845"
+     style="fill:#f89e1f"
+     points="572.61,1492.37 761.74,1621.56 964.34,1515.04 610.2,1273.16 " />
+  <polygon
+     transform="translate(-15.17,-62)"
+     id="polygon847"
+     style="fill:#f89e1f"
+     points="692.12,1658.16 559.68,1567.71 529.51,1743.65 " />
+</svg>

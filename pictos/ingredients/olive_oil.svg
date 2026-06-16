@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1144.63" height="2000" viewBox="0 0 1144.63 2000">
+  <g>
+    <path d="M715.54,383.08V275.58H429.09v107.5L245.26,740.23a905.58,905.58,0,0,0-100.4,414.44V1834a116,116,0,0,0,116,116H883.73a116,116,0,0,0,116-116V1154.67a905.58,905.58,0,0,0-100.4-414.44Z" style="fill: #fff;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <path d="M160.69,1156.78V1834A100.22,100.22,0,0,0,260.9,1934.17H883.73A100.22,100.22,0,0,0,983.94,1834V1160A905.62,905.62,0,0,0,878.88,736.64L744.94,477.5H398.87L262.92,738.8A905.63,905.63,0,0,0,160.69,1156.78Z" style="fill: #d1c826;isolation: isolate;opacity: 0.990000009536743"/>
+  </g>
+  <g>
+    <rect x="387.05" y="50" width="370.53" height="225.58" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <line x1="448.8" y1="95.75" x2="448.8" y2="230.71" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <line x1="510.56" y1="95.75" x2="510.56" y2="230.71" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <line x1="572.31" y1="95.75" x2="572.31" y2="230.71" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <line x1="634.07" y1="95.75" x2="634.07" y2="230.71" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <line x1="695.83" y1="95.75" x2="695.83" y2="230.71" style="fill: #8bc53f;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+  </g>
+  <rect x="226.59" y="1129.87" width="691.46" height="568.22" style="fill: #fff"/>
+  <g>
+    <ellipse cx="536.06" cy="1328.71" rx="134.3" ry="104.24" transform="translate(-592.54 446.04) rotate(-30)" style="fill: #9dbc3c;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <ellipse cx="679.22" cy="1391.05" rx="104.24" ry="134.3" transform="translate(-865.08 1283.75) rotate(-60)" style="fill: #9dbc3c;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <ellipse cx="469.87" cy="1431.05" rx="134.3" ry="104.24" transform="translate(-404.47 204.59) rotate(-17.31)" style="fill: #9dbc3c;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+    <ellipse cx="578.81" cy="1519.33" rx="104.24" ry="134.3" transform="translate(-994.9 1927.79) rotate(-83.7)" style="fill: #9dbc3c;stroke: #3a3632;stroke-linecap: round;stroke-linejoin: round;stroke-width: 20px"/>
+  </g>
+</svg>

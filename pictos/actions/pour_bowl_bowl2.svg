@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   sodipodi:docname="pour_bowl_bowl2.svg"
+   id="svg865"
+   version="1.1"
+   width="1595.818"
+   height="1924.005">
+  <metadata
+     id="metadata869">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg865"
+     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="560"
+     inkscape:cx="400"
+     inkscape:zoom="0.35"
+     showgrid="false"
+     id="namedview867"
+     inkscape:window-height="907"
+     inkscape:window-width="1600"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <style
+     id="style833"><![CDATA[.B{stroke:#231f20}.C{stroke-width:24}.D{stroke-miterlimit:10}.E{stroke-linecap:round}.F{fill:#231f20}]]></style>
+  <path
+     id="path835"
+     class="B C D"
+     fill="#fff"
+     d="M644.2 1912.005c290.33 0 631.2-154.48 631.2-505.38 0-82.66-282.6-158.63-631.2-158.63h-1c-348.6 0-631.2 76-631.2 158.63 0 350.9 340.88 505.38 631.2 505.38" />
+  <path
+     id="path837"
+     class="F"
+     d="M625.28 1759.895h65.23q9.75 0 14.87 4a13.06 13.06 0 0 1 5.13 10.87 14.43 14.43 0 0 1-4.06 10.37q-4.06 4.24-12.3 4.25h-92q-9.36 0-14.62-5.2a16.59 16.59 0 0 1-5.24-12.18q0-4.5 3.37-11.93a42.9 42.9 0 0 1 7.37-11.69q16.62-17.24 30-29.55 13.38-12.3 19.13-16.18a110.45 110.45 0 0 0 17.06-14.56 57.74 57.74 0 0 0 10.37-15 35.76 35.76 0 0 0 3.56-15.06 27.15 27.15 0 0 0-3.81-14.31 26.38 26.38 0 0 0-10.37-9.81 30 30 0 0 0-14.31-3.5q-16.36 0-25.74 14.37-1.24 1.88-4.2 10.25-2.95 8.37-6.62 12.87-3.7 4.5-10.8 4.5a14.06 14.06 0 0 1-10.37-4.13q-4.12-4.12-4.12-11.24a47.12 47.12 0 0 1 3.87-18 51.64 51.64 0 0 1 11.56-17 57.31 57.31 0 0 1 19.49-12.31q11.8-4.68 27.68-4.68 19.13 0 32.6 6a49.17 49.17 0 0 1 15.37 11 51.62 51.62 0 0 1 14 35.24 53.28 53.28 0 0 1-7.69 28.18q-7.68 12.67-15.68 19.86-8 7.2-26.8 22.56-18.8 15.38-25.8 23.87a69.35 69.35 0 0 0-6.13 8.13z" />
+  <g
+     id="g843"
+     class="B C D">
+    <path
+       id="path839"
+       class="E"
+       fill="none"
+       d="M1234.57 1401.815c0 39.6-264.3 98.3-590.33 98.3h-1c-326 0-590.33-58.7-590.33-98.3" />
+    <use
+       id="use841"
+       fill="#fff"
+       xlink:href="#B" />
+  </g>
+  <path
+     id="path845"
+     class="F"
+     d="M1330.6 757.015l33.15-56.18q4.95-8.4 11-10.78a13 13 0 0 1 12 1.11 14.42 14.42 0 0 1 6.87 8.77q1.6 5.65-2.6 12.76l-46.73 79.2q-4.77 8.07-11.9 10a16.57 16.57 0 0 1-13.16-1.67c-2.58-1.53-5.43-4.5-8.56-9a43.1 43.1 0 0 1-6.32-12.29q-6.4-23.07-10.2-40.84-3.8-17.77-4.23-24.7a110.33 110.33 0 0 0-3.87-22.09 57.85 57.85 0 0 0-7.65-16.55 35.61 35.61 0 0 0-11.15-10.72 27.06 27.06 0 0 0-14.26-4 26.39 26.39 0 0 0-13.72 3.94 30.08 30.08 0 0 0-10.29 10.55q-8.3 14.1-.7 29.47 1 2 6.7 8.8 5.7 6.8 7.72 12.25 2 5.46-1.62 11.6a14 14 0 0 1-8.82 6.84q-5.64 1.46-11.78-2.16a47 47 0 0 1-13.53-12.48 51.54 51.54 0 0 1-8.76-18.59 57.07 57.07 0 0 1-.7-23q2-12.55 10-26.22 9.7-16.47 21.73-25.05a49.35 49.35 0 0 1 17.28-7.65 51.56 51.56 0 0 1 37.46 5.85 53.33 53.33 0 0 1 20.37 20.94q7 13.06 9.15 23.6 2.15 10.54 5.8 34.54 3.7 24 7.45 34.36a72 72 0 0 0 3.87 9.37z" />
+  <g
+     id="g851"
+     class="B C D">
+    <use
+       id="use847"
+       class="E"
+       fill="none"
+       xlink:href="#C" />
+    <use
+       id="use849"
+       fill="#fff"
+       xlink:href="#B" />
+  </g>
+  <use
+     id="use855"
+     class="B C D E"
+     fill="none"
+     xlink:href="#C" />
+  <path
+     id="path857"
+     fill="#fff"
+     d="M588.85 1471.665c-15.48-97.08 29.07-374.57 183.42-429.32 0 0 32.66-33.2 26.3-32.33-330.9 46.07-355.84 374.5-355.84 449.5" />
+  <path
+     id="path859"
+     class="B C D E"
+     fill="none"
+     d="M442.74 1459.495c0-76.45 21.63-426.3 371-462m-41.47 53.05c-154.35 54.75-198.9 324-183.42 421.1" />
+  <defs
+     id="defs863">
+    <path
+       d="M1471.28 817.895c147.5-250.06 187.66-622.15-114.58-800.44-71.2-42-280.2 162.82-457.34 463.07l-.5.84c-177.12 300.3-255.27 582.3-184.08 624.3 302.24 178.28 608.5-36.84 756-286.9"
+       id="B" />
+    <path
+       d="M1331.8 50.195c34.12 20.12-49.62 277.6-215.27 558.4l-.52.9c-165.65 280.8-350.5 478.64-384.6 458.5"
+       id="C" />
+  </defs>
+</svg>

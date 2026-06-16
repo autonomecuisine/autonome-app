@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="ground_coriander_seeds.svg"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   id="svg1223"
+   version="1.1"
+   viewBox="0 0 66.145836 66.145839"
+   height="250.00002"
+   width="250.00002"
+   inkscape:export-filename="/Users/marc-andrelanglais/Google Drive File Stream/Shared drives/Autonome Team Drive/03 - Application &amp; Web Site/Application/Assets/Pictograms/Ingredients/In Production/png/ground_coriander_seeds.png"
+   inkscape:export-xdpi="94.199997"
+   inkscape:export-ydpi="94.199997">
+  <defs
+     id="defs1217" />
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     units="px"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:window-height="907"
+     inkscape:window-width="1600"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer2"
+     inkscape:document-units="mm"
+     inkscape:cy="115.53288"
+     inkscape:cx="230.8326"
+     inkscape:zoom="0.98994949"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata1220">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-72.760414,-83.0214)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Outer">
+    <rect
+       style="opacity:0.99;fill:#000000;stroke:none;stroke-width:0.723469;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1786"
+       width="66.145836"
+       height="66.145836"
+       x="72.760414"
+       y="83.0214" />
+  </g>
+  <g
+     transform="translate(-72.760414,-83.0214)"
+     inkscape:label="Inner"
+     id="layer2"
+     inkscape:groupmode="layer">
+    <rect
+       y="85.777435"
+       x="75.516449"
+       height="60.63377"
+       width="60.63377"
+       id="rect1788"
+       style="opacity:0.99;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.663181;stroke-linecap:round;stroke-linejoin:round" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 212.5 212.5 L 212.5 239.58398 L 239.58398 239.58398 L 239.58398 212.5 L 212.5 212.5 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1552" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 95.833984 212.5 L 95.833984 239.58398 L 154.16602 239.58398 L 154.16602 212.5 L 95.833984 212.5 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1554" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 10.416016 212.5 L 10.416016 239.58398 L 37.5 239.58398 L 37.5 212.5 L 10.416016 212.5 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1556" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 154.16602 154.16602 L 154.16602 212.5 L 212.5 212.5 L 212.5 154.16602 L 154.16602 154.16602 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1558" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 37.5 154.16602 L 37.5 212.5 L 95.833984 212.5 L 95.833984 154.16602 L 37.5 154.16602 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1560" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 212.5 95.833984 L 212.5 154.16602 L 239.58398 154.16602 L 239.58398 95.833984 L 212.5 95.833984 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1562" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 95.833984 95.833984 L 95.833984 154.16602 L 154.16602 154.16602 L 154.16602 95.833984 L 95.833984 95.833984 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1564" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 10.416016 95.833984 L 10.416016 154.16602 L 37.5 154.16602 L 37.5 95.833984 L 10.416016 95.833984 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1566" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 154.16602 37.5 L 154.16602 95.833984 L 212.5 95.833984 L 212.5 37.5 L 154.16602 37.5 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1568" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 37.5 37.5 L 37.5 95.833984 L 95.833984 95.833984 L 95.833984 37.5 L 37.5 37.5 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1570" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 212.5 10.416016 L 212.5 37.5 L 239.58398 37.5 L 239.58398 10.416016 L 212.5 10.416016 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1572" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 95.833984 10.416016 L 95.833984 37.5 L 154.16602 37.5 L 154.16602 10.416016 L 95.833984 10.416016 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1574" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,72.760414,83.0214)"
+       d="M 10.416016 10.416016 L 10.416016 37.5 L 37.5 37.5 L 37.5 10.416016 L 10.416016 10.416016 z "
+       style="opacity:0.99;fill:#2c9e48;fill-opacity:1;stroke:none;stroke-width:2.50651;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1576" />
+  </g>
+  <g
+     transform="translate(-72.760414,-83.0214)"
+     inkscape:label="Pattern"
+     id="layer3"
+     inkscape:groupmode="layer">
+    <g
+       style="fill:#ff0000;fill-opacity:0"
+       transform="translate(-29.446426,1.8874628)"
+       id="g1953">
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle1084"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 147.11564,121.51538 a 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle931"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 161.73269,121.51538 a 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle948"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 142.58829,140.65979 a 4.5273516,4.5273516 0 0 1 -4.52735,-4.52736 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle968"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 157.20534,140.65979 a 4.5273516,4.5273516 0 0 1 -4.52735,-4.52736 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle933"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 132.4986,121.51538 a 4.5273516,4.5273516 0 0 1 -4.52736,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52736,4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="circle958"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 127.97124,140.65979 a 4.5273516,4.5273516 0 0 1 -4.52735,-4.52736 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52736,4.52735 4.5273516,4.5273516 0 0 1 -4.52736,4.52736" />
+      <path
+         d="m 142.58829,102.37097 a 4.5273516,4.5273516 0 0 1 4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52736"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         id="path1847"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-ydpi="94.199997" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1857"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 142.58829,102.37097 a 4.5273516,4.5273516 0 0 1 4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52736" />
+      <path
+         d="m 152.67798,106.89833 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52736,-4.52735"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         id="path1862"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-ydpi="94.199997" />
+      <path
+         d="m 123.44389,106.89832 a 4.5273516,4.5273516 0 0 1 4.52735,-4.52734 4.5273516,4.5273516 0 0 1 4.52735,4.52734 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52735,-4.52736"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         id="path1864"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-ydpi="94.199997" />
+      <path
+         d="m 108.82683,121.51538 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52736,-4.52736"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         id="path1889"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-ydpi="94.199997" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1901"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 108.82683,106.89833 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52736,-4.52736" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1903"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 108.82683,136.13243 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52736,-4.52736" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1911"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 147.11565,106.89833 a 4.5273516,4.5273516 0 0 1 -4.52736,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,-4.52735 4.5273516,4.5273516 0 0 1 4.52736,4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1917"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 142.5883,87.75393 a 4.5273516,4.5273516 0 0 1 4.52734,4.52735 4.5273516,4.5273516 0 0 1 -4.52734,4.52735 4.5273516,4.5273516 0 0 1 -4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52736,-4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1929"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 152.67798,92.28128 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52736,-4.52735" />
+      <path
+         inkscape:export-ydpi="94.199997"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:connector-curvature="0"
+         id="path1931"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         d="m 123.44389,92.28127 a 4.5273516,4.5273516 0 0 1 4.52735,-4.52734 4.5273516,4.5273516 0 0 1 4.52735,4.52734 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52735,-4.52736" />
+      <path
+         d="m 108.82683,92.281275 a 4.5273516,4.5273516 0 0 1 4.52736,-4.52735 4.5273516,4.5273516 0 0 1 4.52735,4.52735 4.5273516,4.5273516 0 0 1 -4.52735,4.52736 4.5273516,4.5273516 0 0 1 -4.52736,-4.52736"
+         style="display:inline;opacity:1;fill:#ff0000;fill-opacity:0;stroke:none;stroke-width:3.30729;stroke-miterlimit:10;stroke-dasharray:none;stop-opacity:1"
+         id="path1933"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/marc-andrelanglais/workspace/OpenOrganix/Dev/JOCR/Cuistogo_Android/app/src/main/assets/svg/choco_chips.png"
+         inkscape:export-xdpi="94.199997"
+         inkscape:export-ydpi="94.199997" />
+    </g>
+  </g>
+</svg>
