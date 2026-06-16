@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Autonomē</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOKENS
+============================================================ */
+:root {
+  --cream:    #FAFAF8;
+  --white:    #FFFFFF;
+  --ink:      #1A1A1A;
+  --ink-2:    #4A4A4A;
+  --ink-3:    #8A8A8A;
+  --accent:   #E8622A;
+  --accent-l: #FFF0EB;
+  --green:    #2A7D4F;
+  --green-l:  #E8F5EE;
+  --border:   #EBEBEB;
+  --shadow:   0 2px 12px rgba(0,0,0,0.07);
+  --shadow-lg:0 8px 32px rgba(0,0,0,0.12);
+  --r:        16px;
+  --r-sm:     10px;
+  --nav-h:    64px;
+  --sans:     'DM Sans', sans-serif;
+  --serif:    'DM Serif Display', serif;
+  --transition: 200ms cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ============================================================
+   RESET & BASE
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: var(--sans); }
+a { text-decoration: none; color: inherit; }
+
+/* ============================================================
+   LAYOUT
+============================================================ */
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  height: var(--nav-h);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: var(--shadow);
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.lang-toggle {
+  display: flex; align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-btn {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  transition: var(--transition);
+}
+.lang-btn.active {
+  background: var(--white);
+  color: var(--accent);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* MAIN */
+.main { flex: 1; }
+
+/* ============================================================
+   SCREENS
+============================================================ */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ============================================================
+   SCREEN: HOME — Liste des recettes
+============================================================ */
+.home-hero {
+  background: var(--white);
+  padding: 40px 24px 32px;
+  border-bottom: 1px solid var(--border);
+}
+.home-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.home-hero p {
+  color: var(--ink-3);
+  font-size: 0.95rem;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recipe-card {
+  background: var(--white);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+.recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.recipe-card-img {
+  width: 100%; height: 180px;
+  background: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.recipe-card-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+.recipe-card-body { padding: 20px; }
+.recipe-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.recipe-card-meta {
+  display: flex; gap: 16px;
+  margin-bottom: 12px;
+}
+.meta-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+}
+.meta-icon { font-size: 1rem; }
+.recipe-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: var(--accent-l);
+  color: var(--accent);
+}
+
+/* LOADING */
+.loading {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 80px 24px;
+  gap: 16px;
+  color: var(--ink-3);
+}
+.spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ERROR */
+.error-box {
+  background: #FFF5F5;
+  border: 1px solid #FFD0D0;
+  border-radius: var(--r);
+  padding: 24px;
+  margin: 32px 24px;
+  text-align: center;
+  color: #CC3333;
+}
+
+/* ============================================================
+   SCREEN: RECIPE DETAIL — Page d'accueil de la recette
+============================================================ */
+.detail-back {
+  display: flex; align-items: center; gap: 8px;
+  padding: 16px 24px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.detail-back:hover { opacity: 0.8; }
+
+.detail-hero {
+  background: var(--white);
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  border-bottom: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .detail-hero { grid-template-columns: 1fr; }
+}
+
+.detail-hero-img {
+  aspect-ratio: 1;
+  background: var(--cream);
+  border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+.detail-hero-img img { width: 100%; height: 100%; object-fit: contain; }
+
+.detail-hero-info h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.detail-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px; margin-bottom: 20px;
+}
+.stat-box {
+  background: var(--cream);
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+}
+.stat-label { font-size: 0.72rem; color: var(--ink-3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-value { font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-top: 2px; }
+
+.allergens-box {
+  background: #FFF8F0;
+  border: 1px solid #FFE0C0;
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.allergens-label { font-size: 0.72rem; color: #C0640A; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.allergens-text { font-size: 0.85rem; color: var(--ink-2); }
+
+.btn-start {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: var(--r);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-start:hover { background: #D0501A; transform: translateY(-1px); }
+
+/* STEPS PREVIEW BAR */
+.steps-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.steps-bar-inner {
+  display: flex; gap: 8px;
+  min-width: max-content;
+}
+.step-thumb {
+  width: 52px; height: 52px;
+  border-radius: var(--r-sm);
+  background: var(--cream);
+  border: 2px solid transparent;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.step-thumb img { width: 36px; height: 36px; object-fit: contain; }
+.step-thumb.active { border-color: var(--accent); background: var(--accent-l); }
+.step-thumb.done { border-color: var(--green); background: var(--green-l); }
+.step-thumb-num {
+  position: absolute; bottom: 1px; right: 3px;
+  font-size: 0.6rem; font-weight: 700;
+  color: var(--ink-3);
+}
+
+/* ============================================================
+   SCREEN: STEP — Étape individuelle
+============================================================ */
+.step-screen {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 0 120px;
+}
+.step-progress {
+  height: 4px;
+  background: var(--border);
+}
+.step-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  transition: width 400ms ease;
+}
+
+.step-content {
+  padding: 32px 24px;
+}
+
+/* ACTION step */
+.step-action-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+.step-picto-wrap {
+  width: min(280px, 70vw);
+  height: min(280px, 70vw);
+  background: var(--white);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+.step-picto-wrap img { width: 100%; height: 100%; object-fit: contain; }
+
+.step-instruction {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+/* INGREDIENT step */
+.step-ingredient-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .step-ingredient-layout { grid-template-columns: 1fr; }
+}
+
+.ingredient-picto-side {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+}
+.ingredient-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+}
+
+.ingredient-qty-side {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
+}
+.qty-display {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+.qty-unit { font-size: 1rem; color: var(--ink-3); font-weight: 400; }
+
+.tools-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  justify-content: center;
+}
+.tool-chip {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+/* ACTION STEPS list (mode sous-chef) */
+.action-steps-list {
+  background: var(--white);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-top: 24px;
+}
+.action-step-item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.action-step-item:last-child { border-bottom: none; }
+.action-step-item:hover { background: var(--cream); }
+.action-step-item.done { opacity: 0.5; }
+.action-step-picto {
+  width: 44px; height: 44px;
+  background: var(--cream);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.action-step-picto img { width: 32px; height: 32px; object-fit: contain; }
+.action-step-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  flex: 1;
+}
+.action-step-check {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.action-step-check.done {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+/* TIMER */
+.timer-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.timer-display {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+.timer-display.urgent { color: var(--accent); }
+.timer-controls { display: flex; gap: 12px; justify-content: center; }
+.timer-btn {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+  border: 2px solid var(--border);
+  background: var(--white);
+}
+.timer-btn:hover { border-color: var(--accent); color: var(--accent); }
+.timer-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  width: 64px; height: 64px;
+  font-size: 1.5rem;
+}
+.timer-btn.primary:hover { background: #D0501A; }
+
+/* VIDEO */
+.video-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.video-btn:hover { background: var(--ink-2); }
+
+.video-modal {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.video-modal.open { display: flex; }
+.video-modal-inner {
+  background: var(--ink);
+  border-radius: var(--r);
+  overflow: hidden;
+  width: 100%;
+  max-width: 720px;
+  position: relative;
+}
+.video-modal-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.video-iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+
+/* CHECK STEP (vérification) */
+.check-step-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.check-photos {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.check-photo {
+  position: relative;
+  aspect-ratio: 16/10;
+  background: var(--cream);
+  overflow: hidden;
+}
+.check-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.check-photo-label {
+  position: absolute; bottom: 8px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.check-question {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.check-btns {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+.check-btn {
+  padding: 14px;
+  border-radius: var(--r-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.check-btn.ready {
+  background: var(--green);
+  color: white;
+}
+.check-btn.ready:hover { background: #1F6640; }
+.check-btn.not-ready {
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.check-btn.not-ready:hover { background: var(--border); }
+
+/* COMPLETE screen */
+.complete-screen {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  gap: 24px;
+  min-height: 60vh;
+}
+.complete-picto {
+  width: min(200px, 60vw);
+  height: min(200px, 60vw);
+  background: var(--white);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+.complete-picto img { width: 100%; height: 100%; object-fit: contain; }
+.complete-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--ink);
+}
+.complete-subtitle { color: var(--ink-3); font-size: 0.95rem; }
+.btn-back-home {
+  padding: 16px 32px;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--r);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-back-home:hover { background: #D0501A; }
+
+/* BOTTOM NAV (step screen) */
+.step-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 12px 24px 20px;
+  display: none;
+  gap: 12px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+}
+.step-nav.visible { display: flex; }
+.btn-prev {
+  flex: 0 0 52px; height: 52px;
+  border-radius: var(--r-sm);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  font-size: 1.3rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.btn-prev:hover { background: var(--border); }
+.btn-prev:disabled { opacity: 0.3; cursor: not-allowed; }
+.btn-next {
+  flex: 1; height: 52px;
+  border-radius: var(--r-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: var(--transition);
+}
+.btn-next:hover { background: #D0501A; }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 480px) {
+  .nav { padding: 0 16px; }
+  .home-hero { padding: 28px 16px 24px; }
+  .recipes-grid { padding: 20px 16px; gap: 14px; }
+  .step-content { padding: 24px 16px; }
+  .detail-hero { padding: 24px 16px; }
+}
+
+@media (min-width: 1024px) {
+  .step-screen { padding-bottom: 40px; }
+  .step-nav { max-width: 680px; left: 50%; right: auto; transform: translateX(-50%); border-radius: var(--r) var(--r) 0 0; border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+}
+
+/* ============================================================
+   UTILS
+============================================================ */
+.hidden { display: none !important; }
+.fade-in { animation: fadeIn 250ms ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">Auto<span>n</span>omē</div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SCREEN: HOME -->
+  <div class="screen active" id="screen-home">
+    <div class="home-hero">
+      <h1 id="hero-title">Choisir une recette</h1>
+      <p id="hero-sub">Sélectionne une recette pour commencer</p>
+    </div>
+    <div id="recipes-container">
+      <div class="loading">
+        <div class="spinner"></div>
+        <span>Chargement des recettes…</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN: RECIPE DETAIL -->
+  <div class="screen" id="screen-detail">
+    <div class="detail-back" onclick="showHome()">
+      ← <span id="back-label">Retour aux recettes</span>
+    </div>
+    <div class="detail-hero">
+      <div class="detail-hero-img">
+        <img id="detail-img" src="" alt="">
+      </div>
+      <div class="detail-hero-info">
+        <h1 id="detail-title"></h1>
+        <div class="detail-stats">
+          <div class="stat-box">
+            <div class="stat-label" id="lbl-prep">Préparation</div>
+            <div class="stat-value"><span id="detail-prep"></span> min</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" id="lbl-cook">Cuisson</div>
+            <div class="stat-value"><span id="detail-cook"></span> min</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" id="lbl-portions">Portions</div>
+            <div class="stat-value" id="detail-portions"></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" id="lbl-difficulty">Difficulté</div>
+            <div class="stat-value" id="detail-difficulty"></div>
+          </div>
+        </div>
+        <div class="allergens-box">
+          <div class="allergens-label" id="lbl-allergens">⚠️ Allergènes</div>
+          <div class="allergens-text" id="detail-allergens"></div>
+        </div>
+        <button class="btn-start" id="btn-start-recipe" onclick="startRecipe()">
+          <span>▶</span> <span id="lbl-start">Commencer la recette</span>
+        </button>
+      </div>
+    </div>
+    <!-- Steps preview bar -->
+    <div class="steps-bar">
+      <div class="steps-bar-inner" id="steps-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- SCREEN: STEP -->
+  <div class="screen" id="screen-step">
+    <div class="step-progress">
+      <div class="step-progress-bar" id="step-progress-bar"></div>
+    </div>
+    <div class="step-screen">
+      <div class="step-content fade-in" id="step-content"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="step-nav" id="step-nav">
+  <button class="btn-prev" id="btn-prev" onclick="prevStep()">←</button>
+  <button class="btn-next" id="btn-next" onclick="nextStep()">
+    <span id="btn-next-label">Suivant</span> →
+  </button>
+</div>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="video-modal" onclick="closeVideo(event)">
+  <div class="video-modal-inner">
+    <div class="video-modal-close" onclick="closeVideoBtn()">✕</div>
+    <iframe class="video-iframe" id="video-iframe" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// CONFIG
+// ============================================================
+const API_BASE = 'https://script.google.com/macros/s/AKfycbwit7N1YpQZo5AJrWaTGQpxxHuWuphxjUYOX7kYfXK1TQmB-LBIMpTiGDKcU77LzMLO/exec';
+
+// ============================================================
+// STATE
+// ============================================================
+let lang = 'fr';
+let recipes = [];
+let currentRecipe = null;
+let currentSteps = [];
+let currentStepIndex = 0;
+let completedSteps = new Set();
+let timerInterval = null;
+let timerRemaining = 0;
+let timerRunning = false;
+
+// ============================================================
+// I18N
+// ============================================================
+const T = {
+  fr: {
+    heroTitle: 'Choisir une recette',
+    heroSub: 'Sélectionne une recette pour commencer',
+    back: 'Retour aux recettes',
+    prep: 'Préparation', cook: 'Cuisson',
+    portions: 'Portions', difficulty: 'Difficulté',
+    allergens: '⚠️ Allergènes',
+    start: 'Commencer la recette',
+    next: 'Suivant', prev: '←',
+    finish: 'Terminer',
+    ready: '✓ Oui, c\'est prêt!',
+    notReady: '↩ Pas encore',
+    watchVideo: 'Voir la vidéo',
+    timerStart: 'Démarrer', timerPause: 'Pause', timerResume: 'Reprendre',
+    step: 'Étape',
+    difficulty0: 'Très facile', difficulty1: 'Facile', difficulty2: 'Intermédiaire',
+    complete: 'Bon appétit!',
+    completeSub: 'La recette est terminée. Savourez!',
+    backHome: 'Retour aux recettes',
+    loading: 'Chargement…',
+    errorLoad: 'Erreur de chargement. Réessaie.',
+    portions_unit: 'portions',
+    min: 'min',
+    qty_unit_map: {
+      'cup': 'tasse', 'half_cup': '½ tasse', 'third_cup': '⅓ tasse',
+      'quarter_cup': '¼ tasse', 'table_spoon': 'c. à soupe',
+      'tea_spoon': 'c. à thé', 'half_tea_spoon': '½ c. à thé',
+      'quarter_tea_spoon': '¼ c. à thé', 'eighth_tea_spoon': '⅛ c. à thé',
+    }
+  },
+  en: {
+    heroTitle: 'Choose a recipe',
+    heroSub: 'Select a recipe to get started',
+    back: 'Back to recipes',
+    prep: 'Prep', cook: 'Cook',
+    portions: 'Portions', difficulty: 'Difficulty',
+    allergens: '⚠️ Allergens',
+    start: 'Start recipe',
+    next: 'Next', prev: '←',
+    finish: 'Finish',
+    ready: '✓ Yes, it\'s ready!',
+    notReady: '↩ Not yet',
+    watchVideo: 'Watch video',
+    timerStart: 'Start', timerPause: 'Pause', timerResume: 'Resume',
+    step: 'Step',
+    difficulty0: 'Very easy', difficulty1: 'Easy', difficulty2: 'Intermediate',
+    complete: 'Enjoy your meal!',
+    completeSub: 'Recipe complete. Time to enjoy!',
+    backHome: 'Back to recipes',
+    loading: 'Loading…',
+    errorLoad: 'Loading error. Try again.',
+    portions_unit: 'portions',
+    min: 'min',
+    qty_unit_map: {
+      'cup': 'cup', 'half_cup': '½ cup', 'third_cup': '⅓ cup',
+      'quarter_cup': '¼ cup', 'table_spoon': 'tbsp',
+      'tea_spoon': 'tsp', 'half_tea_spoon': '½ tsp',
+      'quarter_tea_spoon': '¼ tsp', 'eighth_tea_spoon': '⅛ tsp',
+    }
+  }
+};
+
+function t(key) { return T[lang][key] || key; }
+function tQty(toolName) { return T[lang].qty_unit_map[toolName] || toolName.replace(/_/g,' '); }
+
+// ============================================================
+// LANG
+// ============================================================
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === l.toUpperCase()));
+  updateUIText();
+  if (currentRecipe) renderRecipeDetail(currentRecipe);
+  if (currentSteps.length) renderStep(currentStepIndex);
+}
+
+function updateUIText() {
+  document.getElementById('hero-title').textContent = t('heroTitle');
+  document.getElementById('hero-sub').textContent = t('heroSub');
+  document.getElementById('back-label').textContent = t('back');
+  document.getElementById('lbl-prep').textContent = t('prep');
+  document.getElementById('lbl-cook').textContent = t('cook');
+  document.getElementById('lbl-portions').textContent = t('portions');
+  document.getElementById('lbl-difficulty').textContent = t('difficulty');
+  document.getElementById('lbl-allergens').textContent = t('allergens');
+  document.getElementById('lbl-start').textContent = t('start');
+}
+
+// ============================================================
+// API
+// ============================================================
+async function fetchJSON(url) {
+  const res = await fetch(url, { redirect: 'follow' });
+  const text = await res.text();
+  return JSON.parse(text);
+}
+
+async function loadRecipes() {
+  try {
+    const data = await fetchJSON(`${API_BASE}?action=getRecettes`);
+    recipes = Array.isArray(data) ? data : [];
+    renderRecipesList();
+  } catch(e) {
+    document.getElementById('recipes-container').innerHTML =
+      `<div class="error-box">${t('errorLoad')}<br><small>${e.message}</small></div>`;
+  }
+}
+
+async function loadRecipeSteps(recipeId) {
+  const data = await fetchJSON(`${API_BASE}?action=getRecette&id=${recipeId}`);
+  return data;
+}
+
+// ============================================================
+// RENDER: HOME
+// ============================================================
+function renderRecipesList() {
+  const container = document.getElementById('recipes-container');
+  if (!recipes.length) {
+    container.innerHTML = `<div class="loading"><span>${t('loading')}</span></div>`;
+    return;
+  }
+  const grid = document.createElement('div');
+  grid.className = 'recipes-grid';
+  recipes.forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+    card.onclick = () => showRecipeDetail(r);
+    const name = lang === 'fr' ? r.recipe_name_fr : r.recipe_name_en;
+    const cats = Array.isArray(r.categories) ? r.categories : [];
+    const tags = cats.map(c => `<span class="tag">${c}</span>`).join('');
+    card.innerHTML = `
+      <div class="recipe-card-img">
+        <img src="${r.picto_url || ''}" alt="${name}" onerror="this.style.opacity='0.3'">
+      </div>
+      <div class="recipe-card-body">
+        <div class="recipe-card-title">${name}</div>
+        <div class="recipe-card-meta">
+          <span class="meta-item"><span class="meta-icon">🕐</span>${r.prep_time_min || '?'} ${t('min')}</span>
+          <span class="meta-item"><span class="meta-icon">🔥</span>${r.cook_time_min || '?'} ${t('min')}</span>
+          <span class="meta-item"><span class="meta-icon">👤</span>${r.portions_min || '?'}–${r.portions_max || '?'}</span>
+        </div>
+        ${tags ? `<div class="recipe-card-tags">${tags}</div>` : ''}
+      </div>`;
+    grid.appendChild(card);
+  });
+  container.innerHTML = '';
+  container.appendChild(grid);
+}
+
+// ============================================================
+// SCREEN NAVIGATION
+// ============================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function showHome() {
+  stopTimer();
+  currentRecipe = null; currentSteps = []; currentStepIndex = 0; completedSteps.clear();
+  document.getElementById('step-nav').classList.remove('visible');
+  showScreen('screen-home');
+}
+
+async function showRecipeDetail(recipe) {
+  currentRecipe = recipe;
+  showScreen('screen-detail');
+  renderRecipeDetail(recipe);
+  // Load steps in background
+  try {
+    const data = await loadRecipeSteps(recipe.recipe_id);
+    currentSteps = data.steps || [];
+    renderStepsBar();
+  } catch(e) { console.error(e); }
+}
+
+function renderRecipeDetail(r) {
+  document.getElementById('detail-img').src = r.picto_url || '';
+  document.getElementById('detail-title').textContent = lang === 'fr' ? r.recipe_name_fr : r.recipe_name_en;
+  document.getElementById('detail-prep').textContent = r.prep_time_min || '?';
+  document.getElementById('detail-cook').textContent = r.cook_time_min || '?';
+  document.getElementById('detail-portions').textContent = `${r.portions_min || '?'}–${r.portions_max || '?'} ${t('portions_unit')}`;
+  document.getElementById('detail-difficulty').textContent = t(`difficulty${r.difficulty || 0}`);
+  document.getElementById('detail-allergens').textContent = lang === 'fr' ? r.allergens_fr : r.allergens_en;
+}
+
+function renderStepsBar() {
+  const bar = document.getElementById('steps-bar-inner');
+  bar.innerHTML = '';
+  currentSteps.forEach((step, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'step-thumb';
+    thumb.title = `${t('step')} ${i+1}`;
+    if (step.picto_url) {
+      thumb.innerHTML = `<img src="${step.picto_url}" alt="" onerror="this.style.display='none'">`;
+    }
+    thumb.innerHTML += `<span class="step-thumb-num">${i+1}</span>`;
+    thumb.onclick = () => { currentStepIndex = i; showStepScreen(); };
+    bar.appendChild(thumb);
+  });
+}
+
+function startRecipe() {
+  if (!currentSteps.length) return;
+  currentStepIndex = 0;
+  completedSteps.clear();
+  showStepScreen();
+}
+
+function showStepScreen() {
+  showScreen('screen-step');
+  document.getElementById('step-nav').classList.add('visible');
+  renderStep(currentStepIndex);
+}
+
+// ============================================================
+// RENDER: STEP
+// ============================================================
+function renderStep(index) {
+  stopTimer();
+  const step = currentSteps[index];
+  if (!step) return;
+
+  // Progress bar
+  const pct = ((index + 1) / currentSteps.length) * 100;
+  document.getElementById('step-progress-bar').style.width = pct + '%';
+
+  // Update steps bar
+  document.querySelectorAll('.step-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === index);
+    t.classList.toggle('done', completedSteps.has(i));
+  });
+
+  // Nav buttons
+  document.getElementById('btn-prev').disabled = index === 0;
+  const isLast = index === currentSteps.length - 1;
+  document.getElementById('btn-next-label').textContent = isLast ? t('finish') : t('next');
+
+  // Render content
+  const content = document.getElementById('step-content');
+  content.className = 'step-content fade-in';
+
+  switch(step.row_type) {
+    case 'action':
+    case 'action_timed':
+      renderActionStep(content, step);
+      break;
+    case 'action_check':
+      renderActionCheckStep(content, step);
+      break;
+    case 'ingredient':
+      renderIngredientStep(content, step);
+      break;
+    case 'ingredient_check':
+      renderIngredientCheckStep(content, step);
+      break;
+    case 'complete':
+      renderCompleteStep(content, step);
+      document.getElementById('step-nav').classList.remove('visible');
+      break;
+    default:
+      renderActionStep(content, step);
+  }
+
+  void content.offsetWidth; // trigger reflow for animation
+}
+
+function renderActionStep(container, step) {
+  const hasVideo = step.video_url;
+  const hasTimer = step.timer_sec;
+  const instruction = getInstruction(step);
+
+  container.innerHTML = `
+    <div class="step-action-layout">
+      ${step.picto_url ? `
+        <div class="step-picto-wrap">
+          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+        </div>` : ''}
+      ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
+      ${hasTimer ? renderTimerHTML(step.timer_sec) : ''}
+      ${hasVideo ? `<button class="video-btn" onclick="openVideo('${step.video_url}')">▶ ${t('watchVideo')}</button>` : ''}
+    </div>`;
+
+  if (hasTimer) initTimer(step.timer_sec);
+}
+
+function renderActionCheckStep(container, step) {
+  const checkSteps = step.check_steps || [];
+  const timerStep = checkSteps.find(cs => cs.timer_sec);
+  const timerSec = timerStep ? timerStep.timer_sec : null;
+  const instruction = getInstruction(step);
+
+  container.innerHTML = `
+    <div class="step-action-layout">
+      ${step.picto_url ? `
+        <div class="step-picto-wrap">
+          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+        </div>` : ''}
+      ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
+      ${timerSec ? renderTimerHTML(timerSec) : ''}
+      ${step.video_url ? `<button class="video-btn" onclick="openVideo('${step.video_url}')">▶ ${t('watchVideo')}</button>` : ''}
+      ${step.photo_ready_url || step.photo_not_ready_url ? renderCheckHTML(step) : ''}
+    </div>`;
+
+  if (timerSec) initTimer(timerSec);
+}
+
+function renderIngredientStep(container, step) {
+  const actionSteps = step.action_steps || [];
+  const tools = step.tools || [];
+  const hasVideo = step.video_url;
+
+  // Format qty display
+  let qtyDisplay = step.qty_display || '';
+  if (tools.length) {
+    const toolLabels = tools.map(tk => tQty(tk));
+    const counts = {};
+    toolLabels.forEach(t => counts[t] = (counts[t]||0)+1);
+    qtyDisplay = Object.entries(counts).map(([label, cnt]) => cnt > 1 ? `${cnt} x ${label}` : label).join(' + ');
+  }
+
+  const ingredientName = formatIngredientKey(step.ingredient_key);
+
+  container.innerHTML = `
+    <div class="step-ingredient-layout">
+      <div class="ingredient-picto-side">
+        ${step.picto_url ? `
+          <div class="step-picto-wrap" style="width:min(180px,45vw);height:min(180px,45vw);padding:20px">
+            <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+          </div>` : ''}
+        <div class="ingredient-name">${ingredientName}</div>
+        ${hasVideo ? `<button class="video-btn" onclick="openVideo('${step.video_url}')">▶ ${t('watchVideo')}</button>` : ''}
+      </div>
+      <div class="ingredient-qty-side">
+        <div class="qty-display">${step.qty_display || qtyDisplay}</div>
+        ${tools.length ? `<div class="tools-row">${tools.map(tk => `<span class="tool-chip">${tQty(tk)}</span>`).join('')}</div>` : ''}
+      </div>
+    </div>
+    ${actionSteps.length ? `
+      <div class="action-steps-list">
+        ${actionSteps.map((as, i) => `
+          <div class="action-step-item" id="as-${i}" onclick="toggleActionStep(${i})">
+            <div class="action-step-picto">
+              <img src="" alt="" id="as-img-${i}" style="opacity:0.4">
+            </div>
+            <span class="action-step-name">${formatActionKey(as.action_key)}</span>
+            <div class="action-step-check" id="as-check-${i}">✓</div>
+          </div>`).join('')}
+      </div>` : ''}`;
+}
+
+function renderIngredientCheckStep(container, step) {
+  renderIngredientStep(container, step);
+  if (step.photo_ready_url || step.photo_not_ready_url) {
+    container.innerHTML += renderCheckHTML(step);
+  }
+}
+
+function renderCompleteStep(container, step) {
+  const name = currentRecipe ? (lang === 'fr' ? currentRecipe.recipe_name_fr : currentRecipe.recipe_name_en) : '';
+  container.innerHTML = `
+    <div class="complete-screen">
+      ${step.picto_url ? `
+        <div class="complete-picto">
+          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+        </div>` : ''}
+      <h2 class="complete-title">${t('complete')}</h2>
+      <p class="complete-subtitle">${t('completeSub')}</p>
+      ${name ? `<p style="color:var(--ink-3);font-style:italic">${name}</p>` : ''}
+      <button class="btn-back-home" onclick="showHome()">${t('backHome')}</button>
+    </div>`;
+}
+
+// ============================================================
+// CHECK / VERIFICATION
+// ============================================================
+function renderCheckHTML(step) {
+  return `
+    <div class="check-step-box" style="margin-top:24px">
+      <div class="check-photos">
+        ${step.photo_not_ready_url ? `
+          <div class="check-photo">
+            <img src="${step.photo_not_ready_url}" alt="Not ready">
+            <div class="check-photo-label">❌ ${lang==='fr'?'Pas prêt':'Not ready'}</div>
+          </div>` : '<div class="check-photo" style="background:var(--cream)"></div>'}
+        ${step.photo_ready_url ? `
+          <div class="check-photo">
+            <img src="${step.photo_ready_url}" alt="Ready">
+            <div class="check-photo-label">✓ ${lang==='fr'?'Prêt':'Ready'}</div>
+          </div>` : '<div class="check-photo" style="background:var(--cream)"></div>'}
+      </div>
+      <div class="check-question">${lang==='fr'?'Est-ce que c\'est prêt?':'Is it ready?'}</div>
+      <div class="check-btns">
+        <button class="check-btn not-ready" onclick="handleNotReady(${step.extra_time_sec||0})">${t('notReady')}</button>
+        <button class="check-btn ready" onclick="nextStep()">${t('ready')}</button>
+      </div>
+    </div>`;
+}
+
+function handleNotReady(extraTime) {
+  if (extraTime > 0) {
+    stopTimer();
+    initTimer(extraTime);
+    startTimerNow();
+  }
+  // Scroll to timer
+  const timerEl = document.querySelector('.timer-box');
+  if (timerEl) timerEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ============================================================
+// TIMER
+// ============================================================
+function renderTimerHTML(seconds) {
+  return `
+    <div class="timer-box">
+      <div class="timer-display" id="timer-display">${formatTime(seconds)}</div>
+      <div class="timer-controls">
+        <button class="timer-btn primary" id="timer-play-btn" onclick="toggleTimer()">▶</button>
+      </div>
+    </div>`;
+}
+
+function initTimer(seconds) {
+  timerRemaining = seconds;
+  timerRunning = false;
+  updateTimerDisplay();
+}
+
+function startTimerNow() {
+  if (!timerRunning) {
+    timerRunning = true;
+    const btn = document.getElementById('timer-play-btn');
+    if (btn) btn.textContent = '⏸';
+    timerInterval = setInterval(() => {
+      timerRemaining--;
+      updateTimerDisplay();
+      if (timerRemaining <= 0) {
+        stopTimer();
+        const display = document.getElementById('timer-display');
+        if (display) display.textContent = '0:00';
+      }
+    }, 1000);
+  }
+}
+
+function toggleTimer() {
+  if (timerRunning) {
+    stopTimer();
+    const btn = document.getElementById('timer-play-btn');
+    if (btn) btn.textContent = '▶';
+  } else {
+    startTimerNow();
+  }
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerRunning = false;
+}
+
+function updateTimerDisplay() {
+  const display = document.getElementById('timer-display');
+  if (!display) return;
+  display.textContent = formatTime(timerRemaining);
+  display.classList.toggle('urgent', timerRemaining > 0 && timerRemaining <= 30);
+}
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+// ============================================================
+// ACTION STEPS TOGGLE
+// ============================================================
+function toggleActionStep(index) {
+  const item = document.getElementById(`as-${index}`);
+  const check = document.getElementById(`as-check-${index}`);
+  if (!item) return;
+  item.classList.toggle('done');
+  check.classList.toggle('done');
+}
+
+// ============================================================
+// VIDEO
+// ============================================================
+function openVideo(url) {
+  document.getElementById('video-iframe').src = url;
+  document.getElementById('video-modal').classList.add('open');
+}
+function closeVideoBtn() {
+  document.getElementById('video-iframe').src = '';
+  document.getElementById('video-modal').classList.remove('open');
+}
+function closeVideo(e) {
+  if (e.target === document.getElementById('video-modal')) closeVideoBtn();
+}
+
+// ============================================================
+// STEP NAVIGATION
+// ============================================================
+function nextStep() {
+  completedSteps.add(currentStepIndex);
+  if (currentStepIndex < currentSteps.length - 1) {
+    currentStepIndex++;
+    renderStep(currentStepIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    showHome();
+  }
+}
+
+function prevStep() {
+  if (currentStepIndex > 0) {
+    currentStepIndex--;
+    renderStep(currentStepIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// ============================================================
+// FORMAT HELPERS
+// ============================================================
+function getInstruction(step) {
+  if (lang === 'fr' && step.instruction_fr) return step.instruction_fr;
+  if (lang === 'en' && step.instruction_en) return step.instruction_en;
+  return null;
+}
+
+function formatActionKey(key) {
+  if (!key) return '';
+  return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function formatIngredientKey(key) {
+  if (!key) return '';
+  const map = {
+    flour: lang==='fr'?'Farine':'Flour',
+    sugar: lang==='fr'?'Sucre':'Sugar',
+    egg: lang==='fr'?'Oeuf':'Egg',
+    banana: lang==='fr'?'Banane':'Banana',
+    milk: lang==='fr'?'Lait':'Milk',
+    salt: lang==='fr'?'Sel':'Salt',
+    baking_powder: lang==='fr'?'Poudre à pâte':'Baking powder',
+    baking_soda: lang==='fr'?'Bicarbonate de soude':'Baking soda',
+    vanilla_extract: lang==='fr'?'Extrait de vanille':'Vanilla extract',
+    vegetable_oil: lang==='fr'?'Huile végétale':'Vegetable oil',
+    choco_chips: lang==='fr'?'Pépites de chocolat au lait':'Chocolate chips',
+  };
+  return map[key] || key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// ============================================================
+// INIT
+// ============================================================
+loadRecipes();
+</script>
+</body>
+</html>
