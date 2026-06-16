@@ -1043,7 +1043,7 @@ function renderRecipesList() {
     const tags = cats.map(c => `<span class="tag">${c}</span>`).join('');
     card.innerHTML = `
       <div class="recipe-card-img">
-        ${makePicto(r.picto_url)}
+        ${makePicto(localPicto('recettes', r.recipe_id) || r.picto_url)}
       </div>
       <div class="recipe-card-body">
         <div class="recipe-card-title">${name}</div>
@@ -1090,7 +1090,7 @@ async function showRecipeDetail(recipe) {
 }
 
 function renderRecipeDetail(r) {
-  document.getElementById('detail-img-wrap').innerHTML = makePicto(r.picto_url);
+  document.getElementById('detail-img-wrap').innerHTML = makePicto(localPicto('recettes', r.recipe_id) || r.picto_url);
   document.getElementById('detail-title').textContent = lang === 'fr' ? r.recipe_name_fr : r.recipe_name_en;
   document.getElementById('detail-prep').textContent = r.prep_time_min || '?';
   document.getElementById('detail-cook').textContent = r.cook_time_min || '?';
@@ -1146,7 +1146,7 @@ function renderDetailSections(steps) {
 
   const ingHTML = ingredients.map(ing => `
     <div class="detail-ingredient-item">
-      <div class="detail-item-picto">${makePicto(ing.picto_url)}</div>
+      <div class="detail-item-picto">${makePicto(localPicto('ingredients', ing.key) || ing.picto_url)}</div>
       <span class="detail-item-name">${ing.name}</span>
       <span class="detail-item-qty">${ing.qty_display || ''}</span>
     </div>`).join('');
@@ -1174,8 +1174,9 @@ function renderStepsBar() {
     const thumb = document.createElement('div');
     thumb.className = 'step-thumb';
     thumb.title = `${t('step')} ${i+1}`;
-    if (step.picto_url) {
-      thumb.innerHTML = makePicto(step.picto_url, '36px');
+    const localThumbPicto = step.ingredient_key ? localPicto('ingredients', step.ingredient_key) : (step.action_key ? localPicto('actions', step.action_key) : null);
+    if (step.picto_url || localThumbPicto) {
+      thumb.innerHTML = makePicto(localThumbPicto || step.picto_url, '36px');
     }
     thumb.innerHTML += `<span class="step-thumb-num">${i+1}</span>`;
     thumb.onclick = () => { currentStepIndex = i; showStepScreen(); };
@@ -1317,12 +1318,14 @@ function renderMeasureStep(container, step) {
     ? `${step.qty_display} ${ingredientName}`
     : qtyText;
 
+  const localIngPicto = localPicto('ingredients', step.ingredient_key);
+
   container.innerHTML = `
     <div class="step-ingredient-layout">
       <div class="ingredient-picto-side">
-        ${step.picto_url ? `
+        ${step.picto_url || localIngPicto ? `
           <div class="step-picto-wrap" style="width:min(220px,55vw);height:min(220px,55vw)">
-            ${makePicto(step.picto_url)}
+            ${makePicto(localIngPicto || step.picto_url)}
           </div>` : ''}
         <div class="ingredient-name" style="font-size:1.1rem;font-weight:600;text-align:center">${ingredientName}</div>
       </div>
@@ -1341,12 +1344,13 @@ function renderActionStep(container, step) {
   const hasVideo = step.video_url;
   const hasTimer = step.timer_sec;
   const instruction = getInstruction(step);
+  const localActPicto = localPicto('actions', step.action_key);
 
   container.innerHTML = `
     <div class="step-action-layout">
-      ${step.picto_url ? `
+      ${step.picto_url || localActPicto ? `
         <div class="step-picto-wrap">
-          ${makePicto(step.picto_url)}
+          ${makePicto(localActPicto || step.picto_url)}
         </div>` : ''}
       ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
       ${hasTimer ? renderTimerHTML(step.timer_sec) : ''}
@@ -1361,12 +1365,13 @@ function renderActionCheckStep(container, step) {
   const timerStep = checkSteps.find(cs => cs.timer_sec);
   const timerSec = timerStep ? timerStep.timer_sec : null;
   const instruction = getInstruction(step);
+  const localActPicto2 = localPicto('actions', step.action_key);
 
   container.innerHTML = `
     <div class="step-action-layout">
-      ${step.picto_url ? `
+      ${step.picto_url || localActPicto2 ? `
         <div class="step-picto-wrap">
-          ${makePicto(step.picto_url)}
+          ${makePicto(localActPicto2 || step.picto_url)}
         </div>` : ''}
       ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
       ${timerSec ? renderTimerHTML(timerSec) : ''}
@@ -1430,11 +1435,12 @@ function renderIngredientCheckStep(container, step) {
 
 function renderCompleteStep(container, step) {
   const name = currentRecipe ? (lang === 'fr' ? currentRecipe.recipe_name_fr : currentRecipe.recipe_name_en) : '';
+  const localCompletePicto = localPicto('actions', 'serve_and_eat');
   container.innerHTML = `
     <div class="complete-screen">
-      ${step.picto_url ? `
+      ${step.picto_url || localCompletePicto ? `
         <div class="complete-picto">
-          ${makePicto(step.picto_url)}
+          ${makePicto(localCompletePicto || step.picto_url)}
         </div>` : ''}
       <h2 class="complete-title">${t('complete')}</h2>
       <p class="complete-subtitle">${t('completeSub')}</p>
@@ -1694,8 +1700,12 @@ function makePicto(url, size = 'var(--picto-size, 180px)') {
     return `<img src="${url}" style="width:100%;height:100%;object-fit:contain" alt="" onerror="this.style.opacity='0.2'">`;
   }
 
-  // Google Drive → iframe /preview (méthode officielle recommandée par Google
-  // depuis la dépréciation de uc?export=view et thumbnail en 2025-2026)
+  // Pictos locaux /pictos/... (SVG hébergés directement dans le repo) → img simple, instantané
+  if (url.startsWith('/pictos/') || url.startsWith('pictos/')) {
+    return `<img src="${url}" style="width:100%;height:100%;object-fit:contain" alt="" loading="lazy" onerror="this.style.opacity='0.2'">`;
+  }
+
+  // Fallback Google Drive (anciennes URLs pas encore migrées) → iframe /preview
   const fid = extractFileId(url);
   if (fid) {
     return `<div class="picto-iframe-wrap">
@@ -1709,6 +1719,12 @@ function makePicto(url, size = 'var(--picto-size, 180px)') {
   }
 
   return `<img src="${url}" style="width:100%;height:100%;object-fit:contain" alt="">`;
+}
+
+// Construit l'URL d'un picto local à partir de la clé et de la catégorie
+function localPicto(category, key) {
+  if (!key) return null;
+  return `/pictos/${category}/${key}.svg`;
 }
 
 // ============================================================
