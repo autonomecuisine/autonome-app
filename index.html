@@ -248,7 +248,80 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
   width: 100%;
 }
-.detail-hero-img img { width: 100%; height: 100%; object-fit: contain; }
+/* Wrapper iframe Drive — affichage complet du preview */
+.picto-iframe-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  border-radius: inherit;
+}
+.picto-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  background: transparent;
+}
+.detail-sections {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 600px) { .detail-sections { grid-template-columns: 1fr; } }
+.detail-section-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.detail-section-title {
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--border);
+  background: var(--cream);
+}
+.detail-ingredient-item, .detail-tool-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.detail-ingredient-item:last-child, .detail-tool-item:last-child { border-bottom: none; }
+.detail-item-picto {
+  width: 36px; height: 36px;
+  background: var(--cream);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.detail-item-picto iframe {
+  clip-path: inset(20px 20px 20px 20px);
+  transform: scale(2.2);
+  transform-origin: center;
+}
+.detail-item-name { flex: 1; color: var(--ink); }
+.detail-item-qty { color: var(--ink-3); font-size: 0.82rem; }
+.steps-bar-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 24px 4px;
+}
 
 .detail-hero-info h1 {
   font-family: var(--serif);
@@ -744,8 +817,8 @@ a { text-decoration: none; color: inherit; }
       ← <span id="back-label">Retour aux recettes</span>
     </div>
     <div class="detail-hero">
-      <div class="detail-hero-img">
-        <img id="detail-img" src="" alt="">
+      <div class="detail-hero-img" id="detail-img-wrap">
+        <!-- picto chargé dynamiquement -->
       </div>
       <div class="detail-hero-info">
         <h1 id="detail-title"></h1>
@@ -776,8 +849,11 @@ a { text-decoration: none; color: inherit; }
         </button>
       </div>
     </div>
-    <!-- Steps preview bar -->
-    <div class="steps-bar">
+    <!-- Ingrédients + Outils chargés dynamiquement -->
+    <div class="detail-sections" id="detail-sections"></div>
+    <!-- Mini barre d étapes -->
+    <div class="steps-bar hidden" id="steps-bar-detail">
+      <div class="steps-bar-label" id="lbl-steps-overview">Aperçu des étapes</div>
       <div class="steps-bar-inner" id="steps-bar-inner"></div>
     </div>
   </div>
@@ -823,6 +899,7 @@ let lang = 'fr';
 let recipes = [];
 let currentRecipe = null;
 let currentSteps = [];
+let flatSteps = []; // étapes aplaties pour mode sous-chef
 let currentStepIndex = 0;
 let completedSteps = new Set();
 let timerInterval = null;
@@ -966,7 +1043,7 @@ function renderRecipesList() {
     const tags = cats.map(c => `<span class="tag">${c}</span>`).join('');
     card.innerHTML = `
       <div class="recipe-card-img">
-        <img src="${r.picto_url || ''}" alt="${name}" onerror="this.style.opacity='0.3'">
+        ${makePicto(r.picto_url)}
       </div>
       <div class="recipe-card-body">
         <div class="recipe-card-title">${name}</div>
@@ -1007,17 +1084,87 @@ async function showRecipeDetail(recipe) {
     const data = await loadRecipeSteps(recipe.recipe_id);
     currentSteps = data.steps || [];
     renderStepsBar();
+    renderDetailSections(currentSteps);
+    document.getElementById('steps-bar-detail').classList.remove('hidden');
   } catch(e) { console.error(e); }
 }
 
 function renderRecipeDetail(r) {
-  document.getElementById('detail-img').src = r.picto_url || '';
+  document.getElementById('detail-img-wrap').innerHTML = makePicto(r.picto_url);
   document.getElementById('detail-title').textContent = lang === 'fr' ? r.recipe_name_fr : r.recipe_name_en;
   document.getElementById('detail-prep').textContent = r.prep_time_min || '?';
   document.getElementById('detail-cook').textContent = r.cook_time_min || '?';
   document.getElementById('detail-portions').textContent = `${r.portions_min || '?'}–${r.portions_max || '?'} ${t('portions_unit')}`;
   document.getElementById('detail-difficulty').textContent = t(`difficulty${r.difficulty || 0}`);
   document.getElementById('detail-allergens').textContent = lang === 'fr' ? r.allergens_fr : r.allergens_en;
+}
+
+function renderDetailSections(steps) {
+  const sectionsEl = document.getElementById('detail-sections');
+  if (!sectionsEl) return;
+
+  // Extraire ingrédients uniques
+  const ingredients = [];
+  const tools = new Set();
+  const seenIng = new Set();
+
+  steps.forEach(step => {
+    if ((step.row_type === 'ingredient' || step.row_type === 'ingredient_check') && step.ingredient_key) {
+      const key = step.ingredient_key;
+      if (!seenIng.has(key)) {
+        seenIng.add(key);
+        ingredients.push({
+          key,
+          name: formatIngredientKey(key),
+          picto_url: step.picto_url,
+          qty_display: step.qty_display,
+          tools: step.tools || []
+        });
+      }
+      // Collecter les tools
+      (step.tools || []).forEach(t => tools.add(t));
+    }
+  });
+
+  const lbl_ing = lang === 'fr' ? 'Ingrédients' : 'Ingredients';
+  const lbl_tools = lang === 'fr' ? 'Outils' : 'Tools';
+
+  const toolNames = {
+    fr: {
+      cup: 'Tasse', half_cup: '½ tasse', third_cup: '⅓ tasse', quarter_cup: '¼ tasse',
+      table_spoon: 'C. à soupe', tea_spoon: 'C. à thé', half_tea_spoon: '½ c. à thé',
+      quarter_tea_spoon: '¼ c. à thé', knife: 'Couteau', fork: 'Fourchette',
+      bowl1: 'Bol 1', bowl2: 'Bol 2', bread_mold: 'Moule à pain',
+    },
+    en: {
+      cup: 'Cup', half_cup: '½ cup', third_cup: '⅓ cup', quarter_cup: '¼ cup',
+      table_spoon: 'Tbsp', tea_spoon: 'Tsp', half_tea_spoon: '½ tsp',
+      quarter_tea_spoon: '¼ tsp', knife: 'Knife', fork: 'Fork',
+      bowl1: 'Bowl 1', bowl2: 'Bowl 2', bread_mold: 'Bread pan',
+    }
+  };
+
+  const ingHTML = ingredients.map(ing => `
+    <div class="detail-ingredient-item">
+      <div class="detail-item-picto">${makePicto(ing.picto_url)}</div>
+      <span class="detail-item-name">${ing.name}</span>
+      <span class="detail-item-qty">${ing.qty_display || ''}</span>
+    </div>`).join('');
+
+  const toolsHTML = [...tools].map(tk => `
+    <div class="detail-tool-item">
+      <span class="detail-item-name">${(toolNames[lang] && toolNames[lang][tk]) || tk.replace(/_/g,' ')}</span>
+    </div>`).join('');
+
+  sectionsEl.innerHTML = `
+    <div class="detail-section-box">
+      <div class="detail-section-title">${lbl_ing} (${ingredients.length})</div>
+      ${ingHTML}
+    </div>
+    <div class="detail-section-box">
+      <div class="detail-section-title">${lbl_tools}</div>
+      ${toolsHTML || '<div class="detail-tool-item"><span class="detail-item-name" style="color:var(--ink-3)">—</span></div>'}
+    </div>`;
 }
 
 function renderStepsBar() {
@@ -1028,7 +1175,7 @@ function renderStepsBar() {
     thumb.className = 'step-thumb';
     thumb.title = `${t('step')} ${i+1}`;
     if (step.picto_url) {
-      thumb.innerHTML = `<img src="${step.picto_url}" alt="" onerror="this.style.display='none'">`;
+      thumb.innerHTML = makePicto(step.picto_url, '36px');
     }
     thumb.innerHTML += `<span class="step-thumb-num">${i+1}</span>`;
     thumb.onclick = () => { currentStepIndex = i; showStepScreen(); };
@@ -1036,8 +1183,52 @@ function renderStepsBar() {
   });
 }
 
+function flattenStepsSousChef(steps) {
+  const flat = [];
+  steps.forEach(step => {
+    if (step.row_type === 'ingredient' || step.row_type === 'ingredient_check') {
+      // 1. Écran mesure — ingrédient + quantité
+      flat.push({
+        ...step,
+        _flat_type: 'measure',
+        row_type: 'ingredient_measure'
+      });
+      // 2. Chaque action_step → écran séparé
+      const actionSteps = step.action_steps || [];
+      actionSteps.forEach(as => {
+        flat.push({
+          _flat_type: 'action_step',
+          row_type: 'action',
+          action_key: as.action_key,
+          picto_url: as.picto_url || step.picto_url || '',
+          video_url: as.video_url || null,
+          instruction_fr: null,
+          instruction_en: null,
+          timer_sec: as.timer_sec || null,
+          _parent: step
+        });
+      });
+      // 3. Si check_steps → les ajouter après
+      if (step.row_type === 'ingredient_check') {
+        flat.push({
+          ...step,
+          _flat_type: 'check',
+          row_type: 'action_check',
+          action_key: step.action_key || step.ingredient_key,
+          action_steps: null
+        });
+      }
+    } else {
+      flat.push({ ...step, _flat_type: step.row_type });
+    }
+  });
+  return flat;
+}
+
 function startRecipe() {
   if (!currentSteps.length) return;
+  // Aplatir les étapes pour mode sous-chef
+  flatSteps = flattenStepsSousChef(currentSteps);
   currentStepIndex = 0;
   completedSteps.clear();
   showStepScreen();
@@ -1054,11 +1245,11 @@ function showStepScreen() {
 // ============================================================
 function renderStep(index) {
   stopTimer();
-  const step = currentSteps[index];
+  const step = flatSteps[index];
   if (!step) return;
 
   // Progress bar
-  const pct = ((index + 1) / currentSteps.length) * 100;
+  const pct = ((index + 1) / flatSteps.length) * 100;
   document.getElementById('step-progress-bar').style.width = pct + '%';
 
   // Update steps bar
@@ -1085,7 +1276,8 @@ function renderStep(index) {
       renderActionCheckStep(content, step);
       break;
     case 'ingredient':
-      renderIngredientStep(content, step);
+    case 'ingredient_measure':
+      renderMeasureStep(content, step);
       break;
     case 'ingredient_check':
       renderIngredientCheckStep(content, step);
@@ -1101,6 +1293,50 @@ function renderStep(index) {
   void content.offsetWidth; // trigger reflow for animation
 }
 
+function renderMeasureStep(container, step) {
+  // Mode sous-chef: affiche SEULEMENT l'ingrédient + la quantité
+  const tools = step.tools || [];
+  const ingredientName = formatIngredientKey(step.ingredient_key);
+
+  // Construire affichage quantité lisible
+  let qtyText = step.qty_display || '';
+  if (tools.length) {
+    // Compter les outils
+    const counts = {};
+    tools.forEach(tk => counts[tk] = (counts[tk]||0)+1);
+    const parts = Object.entries(counts).map(([tk, cnt]) => {
+      const label = tQty(tk);
+      return cnt > 1 ? `${cnt} ${label}` : label;
+    });
+    qtyText = parts.join(' + ');
+  }
+
+  // Si qty_display est un chiffre seul (quantité unitaire)
+  const isUnitQty = !tools.length && step.qty_unit === 'unit';
+  const qtyLabel = isUnitQty
+    ? `${step.qty_display} ${ingredientName}`
+    : qtyText;
+
+  container.innerHTML = `
+    <div class="step-ingredient-layout">
+      <div class="ingredient-picto-side">
+        ${step.picto_url ? `
+          <div class="step-picto-wrap" style="width:min(220px,55vw);height:min(220px,55vw)">
+            ${makePicto(step.picto_url)}
+          </div>` : ''}
+        <div class="ingredient-name" style="font-size:1.1rem;font-weight:600;text-align:center">${ingredientName}</div>
+      </div>
+      <div class="ingredient-qty-side">
+        <div class="qty-display" style="font-size:clamp(2rem,6vw,3.5rem)">${isUnitQty ? step.qty_display : qtyText}</div>
+        ${!isUnitQty && tools.length ? `
+          <div class="tools-row">
+            ${tools.map(tk => `<span class="tool-chip">${tQty(tk)}</span>`).join('')}
+          </div>` : ''}
+        ${isUnitQty ? `<div style="color:var(--ink-3);font-size:1rem">${ingredientName}</div>` : ''}
+      </div>
+    </div>`;
+}
+
 function renderActionStep(container, step) {
   const hasVideo = step.video_url;
   const hasTimer = step.timer_sec;
@@ -1110,7 +1346,7 @@ function renderActionStep(container, step) {
     <div class="step-action-layout">
       ${step.picto_url ? `
         <div class="step-picto-wrap">
-          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+          ${makePicto(step.picto_url)}
         </div>` : ''}
       ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
       ${hasTimer ? renderTimerHTML(step.timer_sec) : ''}
@@ -1130,7 +1366,7 @@ function renderActionCheckStep(container, step) {
     <div class="step-action-layout">
       ${step.picto_url ? `
         <div class="step-picto-wrap">
-          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+          ${makePicto(step.picto_url)}
         </div>` : ''}
       ${instruction ? `<p class="step-instruction">${instruction}</p>` : `<p class="step-instruction">${formatActionKey(step.action_key)}</p>`}
       ${timerSec ? renderTimerHTML(timerSec) : ''}
@@ -1161,8 +1397,8 @@ function renderIngredientStep(container, step) {
     <div class="step-ingredient-layout">
       <div class="ingredient-picto-side">
         ${step.picto_url ? `
-          <div class="step-picto-wrap" style="width:min(180px,45vw);height:min(180px,45vw);padding:20px">
-            <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+          <div class="step-picto-wrap" style="width:min(180px,45vw);height:min(180px,45vw);padding:0">
+            ${makePicto(step.picto_url)}
           </div>` : ''}
         <div class="ingredient-name">${ingredientName}</div>
         ${hasVideo ? `<button class="video-btn" onclick="openVideo('${step.video_url}')">▶ ${t('watchVideo')}</button>` : ''}
@@ -1176,8 +1412,8 @@ function renderIngredientStep(container, step) {
       <div class="action-steps-list">
         ${actionSteps.map((as, i) => `
           <div class="action-step-item" id="as-${i}" onclick="toggleActionStep(${i})">
-            <div class="action-step-picto">
-              <img src="" alt="" id="as-img-${i}" style="opacity:0.4">
+            <div class="action-step-picto" style="overflow:hidden">
+              <div style="width:44px;height:44px">${makePicto(as.picto_url||'')}</div>
             </div>
             <span class="action-step-name">${formatActionKey(as.action_key)}</span>
             <div class="action-step-check" id="as-check-${i}">✓</div>
@@ -1198,7 +1434,7 @@ function renderCompleteStep(container, step) {
     <div class="complete-screen">
       ${step.picto_url ? `
         <div class="complete-picto">
-          <img src="${step.picto_url}" alt="" onerror="this.style.opacity='0.2'">
+          ${makePicto(step.picto_url)}
         </div>` : ''}
       <h2 class="complete-title">${t('complete')}</h2>
       <p class="complete-subtitle">${t('completeSub')}</p>
@@ -1339,7 +1575,7 @@ function closeVideo(e) {
 // ============================================================
 function nextStep() {
   completedSteps.add(currentStepIndex);
-  if (currentStepIndex < currentSteps.length - 1) {
+  if (currentStepIndex < flatSteps.length - 1) {
     currentStepIndex++;
     renderStep(currentStepIndex);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1367,6 +1603,45 @@ function getInstruction(step) {
 
 function formatActionKey(key) {
   if (!key) return '';
+  const fr = {
+    wash_hands: 'Laver les mains',
+    oven_rack_center: 'Placer la grille au centre du four',
+    preheat_oven_350: 'Préchauffer le four à 350°F',
+    preheat_oven_400: 'Préchauffer le four à 400°F',
+    mix_bowl1_spoon_dry: 'Mélanger les ingrédients secs dans le bol 1',
+    mix_bowl2_banana_bread_batter: 'Mélanger dans le bol 2',
+    mix_dry_bowl1_spoon: 'Mélanger les ingrédients secs dans le bol 1',
+    mix_wet_bowl2_whisk: 'Mélanger au fouet dans le bol 2',
+    mix_thick_bowl2_spoon: 'Mélanger la pâte dans le bol 2',
+    set_bowl1_aside: 'Mettre le bol 1 de côté',
+    set_bowl2_aside: 'Mettre le bol 2 de côté',
+    pour_bowl1_bowl2: 'Verser le bol 1 dans le bol 2',
+    pour_bowl2_bread_mold: 'Verser dans le moule à pain',
+    grease_bread_mold: 'Huiler le moule à pain',
+    set_oven_temp_off: 'Éteindre le four',
+    cool_banana_bread: 'Laisser refroidir le pain aux bananes',
+    unmold_banana_bread: 'Démouler le pain aux bananes',
+    peel_banana: 'Éplucher la banane',
+    cut_banana: 'Couper la banane',
+    pour_cutting_board_banana_bowl2: 'Verser les morceaux dans le bol 2',
+    crush_banana_fork_bowl: 'Écraser la banane avec une fourchette',
+    break_egg_bowl2: 'Casser les oeufs dans le bol 2',
+    pour_flour_bowl1: 'Verser la farine dans le bol 1',
+    pour_choco_chips_bowl1: 'Verser les pépites dans le bol 1',
+    pour_baking_powder_bowl1: 'Verser la poudre à pâte dans le bol 1',
+    pour_baking_soda_bowl1: 'Verser le bicarbonate dans le bol 1',
+    pour_salt_bowl1: 'Verser le sel dans le bol 1',
+    pour_sugar_bowl2: 'Verser le sucre dans le bol 2',
+    pour_milk_bowl2: 'Verser le lait dans le bol 2',
+    pour_vegetable_oil_bowl2: 'Verser l'huile dans le bol 2',
+    pour_vanilla_extract_bowl2: 'Verser la vanille dans le bol 2',
+    pour_vegetable_oil_bread_mold: 'Verser l'huile dans le moule',
+    oven_mits: 'Mettre les mitaines de four',
+    bread_mold_oven: 'Mettre le moule au four',
+    set_bread_mold_stovetop: 'Placer le moule sur le rond froid',
+    check: 'Vérifier',
+  };
+  if (lang === 'fr' && fr[key]) return fr[key];
   return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
@@ -1386,6 +1661,54 @@ function formatIngredientKey(key) {
     choco_chips: lang==='fr'?'Pépites de chocolat au lait':'Chocolate chips',
   };
   return map[key] || key.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// ============================================================
+// URL HELPERS
+// ============================================================
+
+// Extrait le FILE_ID depuis n'importe quel format Google Drive
+function extractFileId(url) {
+  if (!url) return null;
+  // uc?export=view&id=FILE_ID ou thumbnail?id=FILE_ID
+  const m1 = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (m1) return m1[1];
+  // /file/d/FILE_ID/
+  const m2 = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (m2) return m2[1];
+  return null;
+}
+
+// URL preview pour iframe (SVG, PNG, JPG)
+function toPreviewUrl(url) {
+  const fid = extractFileId(url);
+  return fid ? `https://drive.google.com/file/d/${fid}/preview` : url;
+}
+
+// Génère un élément picto — iframe pour les images Drive, img pour Firebase
+function makePicto(url, size = 'var(--picto-size, 180px)') {
+  if (!url) return '<div style="opacity:0.2;font-size:2rem;text-align:center">🖼️</div>';
+
+  // Firebase Storage (photos vérification) → img classique
+  if (url.includes('firebasestorage.googleapis.com')) {
+    return `<img src="${url}" style="width:100%;height:100%;object-fit:contain" alt="" onerror="this.style.opacity='0.2'">`;
+  }
+
+  // Google Drive → iframe /preview (méthode officielle recommandée par Google
+  // depuis la dépréciation de uc?export=view et thumbnail en 2025-2026)
+  const fid = extractFileId(url);
+  if (fid) {
+    return `<div class="picto-iframe-wrap">
+      <iframe 
+        src="https://drive.google.com/file/d/${fid}/preview" 
+        loading="lazy"
+        allow="autoplay"
+        title="picto">
+      </iframe>
+    </div>`;
+  }
+
+  return `<img src="${url}" style="width:100%;height:100%;object-fit:contain" alt="">`;
 }
 
 // ============================================================
